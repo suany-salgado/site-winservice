@@ -7,13 +7,18 @@
     <meta name="keywords" content="assistência técnica equipamentos médicos, manutenção desfibrilador, calibração equipamentos hospitalares, Desfibrilador Externo Automático, DEA, Tothlifecare, Toth, EasyShock, EasyShock Toth, EasyShock Tothlifecare, DEA Tothlifecare, DEA Toth, Desfibrilador Toth, Desfibrilador Tothlifecare, Calibração DEA, Calibração desfibrilador, Calibração bomba de infusão, Calibração cardioversor, Rio de Janeiro, Toth Lifecare, Medlevensohn">
     <title>Win Service | Assistência Técnica em Equipamentos Médicos - RJ</title>
 
-    <!-- Google Fonts - Lora (Serif) + Lato (Sans-serif) -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="imagens/logo_letras_branca.png" as="image">
+    <link rel="preload" href="imagens/background2.jpeg" as="image">
+
+    <!-- Google Fonts - Optimized with display=swap and reduced weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS - Production optimized -->
+    <script src="https://cdn.tailwindcss.com?plugins="></script>
     <script>
         tailwind.config = {
                         theme: {
@@ -157,12 +162,14 @@
 
                     <!-- Mobile Menu - Visible inline -->
                     <div class="flex items-center gap-1 sm:gap-2 lg:hidden">
-                        <a href="servicos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-600/10 transition-colors">Serviços</a>
-                        <a href="produtos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-600/10 transition-colors">Produtos</a>
-                        <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-600/10 transition-colors">Cliente</a>
-                        <a href="contato.html" class="bg-emerald-600 text-white text-[10px] sm:text-xs font-semibold px-2 py-1.5 rounded transition-colors">Assistência</a>
-                        <!-- Theme toggle mobile -->
-
+                        <a href="servicos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-800/50 transition-colors">Serviços</a>
+                        <a href="produtos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-800/50 transition-colors">Produtos</a>
+                        <a href="contato.html" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] sm:text-xs font-semibold px-2 sm:px-3 py-1.5 rounded transition-colors">Assistência</a>
+                        <button id="mobile-menu-btn" class="p-1.5 text-white hover:bg-slate-800/50 rounded transition-colors" aria-label="Menu">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
                     </div>
 
                     <!-- Desktop menu - Centered -->
@@ -178,6 +185,15 @@
                     </div>
                 </div>
             </nav>
+        </div>
+
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-800 border-t border-slate-700">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-1">
+                <a href="index.html" class="text-white font-semibold py-2 px-4 rounded bg-slate-700 transition-colors text-sm">Início</a>
+                <a href="index.html#sobre" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Sobre Nós</a>
+                <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Área do Cliente</a>
+            </div>
         </div>
     </header>
 
@@ -421,6 +437,7 @@
                                 <div class="carousel-slide min-w-full">
                                     <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
                                         <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.34 (1).jpeg" alt="Treinamento DEA - Win Service"
+                                             loading="lazy" decoding="async"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
                                     <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Treinamento DEA</p>
@@ -428,6 +445,7 @@
                                 <div class="carousel-slide min-w-full">
                                     <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
                                         <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (2).jpeg" alt="Equipamentos de Alta Tecnologia - Win Service"
+                                             loading="lazy" decoding="async"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
                                     <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Equipamentos de Alta Tecnologia</p>
@@ -435,6 +453,7 @@
                                 <div class="carousel-slide min-w-full">
                                     <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
                                         <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (3).jpeg" alt="Assistência Técnica Autorizada - Win Service"
+                                             loading="lazy" decoding="async"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
                                     <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Assistência Técnica Autorizada</p>
@@ -442,6 +461,7 @@
                                 <div class="carousel-slide min-w-full">
                                     <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
                                         <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.33.jpeg" alt="Equipe Especializada - Win Service"
+                                             loading="lazy" decoding="async"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
                                     <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Equipe Especializada</p>
@@ -631,10 +651,10 @@
                 <p class="text-slate-500 font-medium uppercase tracking-wider text-sm">Parceiros Oficiais</p>
                 <div class="flex items-center gap-4">
                     <div class="glass-card px-6 py-3 rounded-md">
-                        <img src="imagens/toth.png" alt="Toth Lifecare" class="h-10 object-contain">
+                        <img src="imagens/toth.png" alt="Toth Lifecare" loading="lazy" decoding="async" class="h-10 object-contain">
                     </div>
                     <div class="glass-card px-6 py-3 rounded-md">
-                        <img src="imagens/medle.png" alt="Medlevensohn" class="h-10 object-contain">
+                        <img src="imagens/medle.png" alt="Medlevensohn" loading="lazy" decoding="async" class="h-10 object-contain">
                     </div>
                 </div>
             </div>
@@ -713,7 +733,15 @@
         </svg>
     </a>
 
-    <script>// Carousel
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
+
+        // Carousel
         const carouselTrack = document.getElementById('carousel-track');
         const prevBtn = document.getElementById('carousel-prev');
         const nextBtn = document.getElementById('carousel-next');

@@ -7,13 +7,17 @@
     <meta name="keywords" content="assistência técnica equipamentos médicos, calibração DEA, Calibração desfibrilador DEA, Calibração DEA tothlifecare, Calibração DEA Toth, Calibração EasyShock, Calibração desfibrilador externo automático, Calibração Monitor de triagem, Calibração cardioversor, Calibração cardioversor bifásico, Calibração aparelho de pressão, Calibração esfigmomanômetro, Calibração aparelho de pressão microlife, Calibração esfigmomanômetro microlife, Calibração aparelho de pressão medlevensohn, Calibração esfigmomanômetro medlevensohn, Calibração Monitor de pressão arterial, Calibração Monitor de pressão arterial microlife, Calibração Monitor de pressão arterial medlevensohn, Calibração bomba de infusão, Calibração bomba de seringa, manutenção equipamentos médicos, teste segurança elétrica IEC 60601, Win Service RJ">
     <title>Solicitar Assistência Técnica | Win Service - Equipamentos Médicos RJ</title>
 
-    <!-- Google Fonts - Lora (Serif) + Lato (Sans-serif) -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="imagens/logo_letras_branca.png" as="image">
+
+    <!-- Google Fonts - Optimized with display=swap and reduced weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS - Production optimized -->
+    <script src="https://cdn.tailwindcss.com?plugins="></script>
     <script>
         tailwind.config = {
                         theme: {
@@ -71,10 +75,13 @@
                     <img src="imagens/logo_letras_branca.png" alt="Win Service" class="h-10 sm:h-12 lg:h-14 max-w-[140px] sm:max-w-[180px] lg:max-w-[220px] object-contain">
                 </a>
 
-                <div class="flex items-center gap-2 lg:hidden">
-                    
-                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-white hover:text-slate-200" aria-label="Menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Mobile Menu - Visible inline -->
+                <div class="flex items-center gap-1 sm:gap-2 lg:hidden">
+                    <a href="servicos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-800/50 transition-colors">Serviços</a>
+                    <a href="produtos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-800/50 transition-colors">Produtos</a>
+                    <a href="contato.html" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] sm:text-xs font-semibold px-2 sm:px-3 py-1.5 rounded transition-colors">Assistência</a>
+                    <button id="mobile-menu-btn" class="p-1.5 text-white hover:bg-slate-800/50 rounded transition-colors" aria-label="Menu">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
                     </button>
@@ -91,14 +98,12 @@
             </nav>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden glass">
-            <div class="container mx-auto px-4 py-4 flex flex-col gap-2">
-                <a href="index.html" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Início</a>
-                <a href="index.html#sobre" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Sobre Nós</a>
-                <a href="servicos.html" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Serviços</a>
-                <a href="produtos.html" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Produtos</a>
-                <a href="contato.html" class="text-slate-900 font-semibold py-2 px-4 rounded bg-slate-100">Solicitar Assistência Técnica</a>
-                <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Área do Cliente</a>
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-800 border-t border-slate-700">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-1">
+                <a href="index.html" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Início</a>
+                <a href="index.html#sobre" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Sobre Nós</a>
+                <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Área do Cliente</a>
             </div>
         </div>
     </header>

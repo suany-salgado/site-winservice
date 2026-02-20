@@ -7,13 +7,17 @@
     <meta name="keywords" content="DEA EasyShock, Desfibrilador Externo Automático, DEA, Tothlifecare, Toth, EasyShock Toth, EasyShock Tothlifecare, DEA Tothlifecare, DEA Toth, Desfibrilador Toth, Desfibrilador Tothlifecare, Monitor SmartCheck, Monitor de triagem, Monitor de triagem Tothlifecare, Monitor de triagem Toth, Ultrassom setorial portátil, Ultrassom setorial portátil tothlifecare, Ultrassom setorial portátil toth, Toth Watch, Smartwatch, Medlevensohn, Esfigmomanômetro, equipamentos médicos, venda, locação, Rio de Janeiro">
     <title>Catálogo de Equipamentos | Win Service - Equipamentos Médicos RJ</title>
 
-    <!-- Google Fonts - Lora (Serif) + Lato (Sans-serif) -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="imagens/logo_letras_branca.png" as="image">
+
+    <!-- Google Fonts - Optimized with display=swap and reduced weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS - Production optimized -->
+    <script src="https://cdn.tailwindcss.com?plugins="></script>
     <script>
         tailwind.config = {
                         theme: {
@@ -83,10 +87,13 @@
                     <img src="imagens/logo_letras_branca.png" alt="Win Service" class="h-10 sm:h-12 lg:h-14 max-w-[140px] sm:max-w-[180px] lg:max-w-[220px] object-contain">
                 </a>
 
-                <div class="flex items-center gap-2 lg:hidden">
-                    
-                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-white hover:text-slate-200" aria-label="Menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Mobile Menu - Visible inline -->
+                <div class="flex items-center gap-1 sm:gap-2 lg:hidden">
+                    <a href="servicos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-800/50 transition-colors">Serviços</a>
+                    <a href="produtos.html" class="text-white text-[10px] sm:text-xs font-semibold px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-800/50 transition-colors">Produtos</a>
+                    <a href="contato.html" class="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] sm:text-xs font-semibold px-2 sm:px-3 py-1.5 rounded transition-colors">Assistência</a>
+                    <button id="mobile-menu-btn" class="p-1.5 text-white hover:bg-slate-800/50 rounded transition-colors" aria-label="Menu">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
                     </button>
@@ -103,14 +110,12 @@
             </nav>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden glass">
-            <div class="container mx-auto px-4 py-4 flex flex-col gap-2">
-                <a href="index.html" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Início</a>
-                <a href="index.html#sobre" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Sobre Nós</a>
-                <a href="servicos.html" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Serviços</a>
-                <a href="produtos.html" class="text-slate-900 font-semibold py-2 px-4 rounded bg-slate-100">Produtos</a>
-                <a href="contato.html" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Solicitar Assistência Técnica</a>
-                <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-slate-700 font-medium py-2 px-4 rounded hover:bg-slate-100">Área do Cliente</a>
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-800 border-t border-slate-700">
+            <div class="container mx-auto px-4 py-3 flex flex-col gap-1">
+                <a href="index.html" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Início</a>
+                <a href="index.html#sobre" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Sobre Nós</a>
+                <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-white/80 font-medium py-2 px-4 rounded hover:bg-slate-700 transition-colors text-sm">Área do Cliente</a>
             </div>
         </div>
     </header>
@@ -142,19 +147,19 @@
                         <div class="relative overflow-hidden">
                             <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
-                                    <img src="imagens/dea_fundotransp.png" alt="DEA EasyShock" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                    <img src="imagens/dea_fundotransp.png" alt="DEA EasyShock" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
-                                    <img src="imagens/monitor_fundotransp.png" alt="Monitor Smart CHECK" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                    <img src="imagens/monitor_fundotransp.png" alt="Monitor Smart CHECK" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
-                                    <img src="imagens/ultrassom_fundotransp.png" alt="Ultrassom Portátil" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                    <img src="imagens/ultrassom_fundotransp.png" alt="Ultrassom Portátil" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
-                                    <img src="imagens/smartw_fundotransp.png" alt="Toth Watch" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                    <img src="imagens/smartw_fundotransp.png" alt="Toth Watch" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
-                                    <img src="imagens/medidor_fundotranps.png" alt="Medidor de Glicemia" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                    <img src="imagens/medidor_fundotranps.png" alt="Medidor de Glicemia" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
                             </div>
                         </div>
@@ -201,7 +206,7 @@
                     <!-- Card: DEA EasyShock -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/dea222.png" alt="DEA EasyShock" class="max-h-full object-contain">
+                            <img src="imagens/dea222.png" alt="DEA EasyShock" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <h3 class="text-lg font-bold text-slate-900 mb-2">DEA EasyShock</h3>
@@ -217,7 +222,7 @@
                     <!-- Card: Smart CHECK -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/monitor222.png" alt="Monitor Smart CHECK" class="max-h-full object-contain">
+                            <img src="imagens/monitor222.png" alt="Monitor Smart CHECK" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <div class="flex items-center gap-2 mb-2">
@@ -236,7 +241,7 @@
                     <!-- Card: Ultrassom Portátil -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/ultrassom222.png" alt="Ultrassom Setorial Portátil" class="max-h-full object-contain">
+                            <img src="imagens/ultrassom222.png" alt="Ultrassom Setorial Portátil" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <div class="flex items-center gap-2 mb-2">
@@ -255,7 +260,7 @@
                     <!-- Card: Toth Watch -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/smartw222.png" alt="Toth Watch Smartwatch Médico" class="max-h-full object-contain">
+                            <img src="imagens/smartw222.png" alt="Toth Watch Smartwatch Médico" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <div class="flex items-center gap-2 mb-2">
@@ -305,7 +310,7 @@
                     <!-- Card: Aparelho de Pressão BPA200 -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/med1.png" alt="Aparelho de Pressão BPA200" class="max-h-full object-contain">
+                            <img src="imagens/med1.png" alt="Aparelho de Pressão BPA200" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <div class="flex items-center gap-2 mb-2">
@@ -324,7 +329,7 @@
                     <!-- Card: Monitor de Pressão de Pulso -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/med2.png" alt="Monitor de Pressão de Pulso" class="max-h-full object-contain">
+                            <img src="imagens/med2.png" alt="Monitor de Pressão de Pulso" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <h3 class="text-lg font-bold text-slate-900 mb-2">Monitor de Pressão de Pulso</h3>
@@ -340,7 +345,7 @@
                     <!-- Card: Medidor Luna Duo -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/med3.png" alt="Medidor Luna Duo" class="max-h-full object-contain">
+                            <img src="imagens/med3.png" alt="Medidor Luna Duo" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <div class="flex items-center gap-2 mb-2">
@@ -359,7 +364,7 @@
                     <!-- Card: Nebulizador -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/med5.png" alt="Nebulizador Medlevensohn" class="max-h-full object-contain">
+                            <img src="imagens/med5.png" alt="Nebulizador Medlevensohn" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <h3 class="text-lg font-bold text-slate-900 mb-2">Nebulizador ML01</h3>
@@ -374,7 +379,7 @@
                     <!-- Card: Oxímetro -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/med6.png" alt="Oxímetro de Pulso" class="max-h-full object-contain">
+                            <img src="imagens/med6.png" alt="Oxímetro de Pulso" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <h3 class="text-lg font-bold text-slate-900 mb-2">Oxímetro de Pulso</h3>
@@ -390,7 +395,7 @@
                     <!-- Card: Aparelho de Pressão Braço -->
                     <div class="bg-white border border-slate-200 rounded-md overflow-hidden flex flex-col">
                         <div class="bg-white p-6 flex items-center justify-center h-64">
-                            <img src="imagens/med4.png" alt="Aparelho de Pressão Braço" class="max-h-full object-contain">
+                            <img src="imagens/med4.png" alt="Aparelho de Pressão Braço" loading="lazy" decoding="async" class="max-h-full object-contain">
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
                             <h3 class="text-lg font-bold text-slate-900 mb-2">Aparelho de Pressão Braço</h3>
