@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
-            theme: {
+                        theme: {
                 // Fontes no nível raiz para sobrescrever padrões do Tailwind
                 fontFamily: {
                     'sans': ['Lato', 'system-ui', 'sans-serif'],
@@ -25,20 +24,9 @@
                 },
                 extend: {
                     colors: {
-                        // Midnight Executive - Dark Mode Palette
-                        'navy-deep': '#020617',      // Slate 950 - Background principal (quase preto)
-                        'navy-dark': '#0F172A',      // Slate 900 - Surfaces/Cards
-                        'navy-mid': '#1E293B',       // Slate 800 - Elementos secundários
-                        'navy-light': '#334155',     // Slate 700 - Bordas e destaques sutis
-                        'blue-accent': '#60A5FA',    // Blue 400 - Accent mais suave e profissional
-                        'blue-accent-light': '#1E293B',
-                        'red-accent': '#EF4444',     // Red 500 - Vibrante para CTAs
-                        'red-hover': '#DC2626',      // Red 600
-                        // Light Mode Palette
-                        'light-bg': '#f8fafc',
-                        'light-card': '#ffffff',
-                        'light-text': '#1e293b',
-                        'light-text-muted': '#64748b',
+                        // Clinical Corporate Palette
+                        'deep-navy': '#0A192F',      // Deep Navy - Cor principal
+                        'clinical-green': '#059669', // Verde clínico para checks
                     },
                     lineHeight: {
                         'tight': '1.2',
@@ -69,45 +57,6 @@
         h1 { font-weight: 700; }
         h2 { font-weight: 600; }
         h3, h4 { font-weight: 500; }
-
-        /* Força Lora em elementos com font-serif */
-        .font-serif {
-            font-family: 'Lora', Georgia, serif !important;
-        }
-
-        /* ==================== DARK MODE - Midnight Executive ==================== */
-        .dark .bg-gradient-navy {
-            background: linear-gradient(135deg, #020617 0%, #0F172A 50%, #1E293B 100%);
-        }
-        .dark .bg-gradient-navy-reverse {
-            background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
-        }
-        .dark .bg-gradient-hero {
-            background: linear-gradient(135deg, #020617 0%, #0F172A 50%, #1E293B 100%);
-        }
-
-        /* Dark Mode Glass effects - Midnight Executive */
-        .dark .glass {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .dark .glass-light {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .dark .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.3s ease;
-        }
-        .dark .glass-card:hover {
-            background: rgba(30, 41, 59, 0.8);
-            border-color: rgba(96, 165, 250, 0.3);
-            transform: translateY(-4px);
-        }
 
         /* ==================== LIGHT MODE ==================== */
         .bg-gradient-navy {
@@ -150,14 +99,8 @@
         .glow-red {
             box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
         }
-        .dark .glow-red {
-            box-shadow: 0 0 50px rgba(239, 68, 68, 0.5);
-        }
         .glow-blue {
             box-shadow: 0 0 30px rgba(96, 165, 250, 0.15);
-        }
-        .dark .glow-blue {
-            box-shadow: 0 0 40px rgba(96, 165, 250, 0.2);
         }
 
         /* Animated gradient border */
@@ -188,90 +131,53 @@
         }
 
         /* Pattern overlay */
-        .dark .pattern-overlay {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a90d9' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
         .pattern-overlay {
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e4976' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        /* Theme toggle button */
-        .theme-toggle {
-            transition: all 0.3s ease;
-        }
-        .theme-toggle:hover {
-            transform: rotate(15deg);
-        }
-
-        /* Light mode specific overrides for hero */
-        html:not(.dark) .hero-overlay {
+        /* Theme toggle button *//* Light mode specific overrides for hero */
+        .hero-overlay {
             background: linear-gradient(135deg, rgba(248, 250, 252, 0.92) 0%, rgba(226, 232, 240, 0.88) 50%, rgba(203, 213, 225, 0.85) 100%);
         }
     </style>
 </head>
-<body class="bg-stone-50 dark:bg-navy-deep text-slate-800 dark:text-white">
+<body class="bg-slate-50 text-slate-800">
 
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="glass">
-            <nav class="container mx-auto px-4 lg:px-8 py-3 flex items-center justify-between lg:justify-center relative">
-                <!-- Logo - Left on mobile, absolute left on desktop -->
-                <a href="index.html" class="lg:absolute lg:left-8">
-                    <!-- Logo Light Mode -->
-                    <img src="imagens/win_fundotransp (1).png" alt="Win Service" class="h-16 md:h-20 max-w-[220px] object-contain block dark:hidden">
-                    <!-- Logo Dark Mode -->
-                    <img src="imagens/logo_letras_branca.png" alt="Win Service" class="h-16 md:h-20 max-w-[220px] object-contain hidden dark:block">
-                </a>
+        <div class="bg-slate-900">
+            <nav class="container mx-auto px-3 lg:px-8 py-3 lg:py-4">
+                <!-- Mobile Header: Logo + Menu inline -->
+                <div class="flex items-center justify-between lg:justify-center relative">
+                    <!-- Logo -->
+                    <a href="index.html" class="lg:absolute lg:left-8 flex-shrink-0">
+                        <img src="imagens/logo_letras_branca.png" alt="Win Service" class="h-10 sm:h-12 lg:h-14 max-w-[140px] sm:max-w-[180px] lg:max-w-[220px] object-contain">
+                        
+                    </a>
 
-                <!-- Theme toggle + Mobile menu button -->
-                <div class="flex items-center gap-2 lg:hidden">
-                    <button id="theme-toggle-mobile" class="theme-toggle p-2 rounded-lg text-navy-dark dark:text-white/80 hover:text-navy-mid dark:hover:text-white hover:bg-navy-light/10 dark:hover:bg-white/10" aria-label="Alternar tema">
-                        <!-- Sun icon (shown in dark mode) -->
-                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                        </svg>
-                        <!-- Moon icon (shown in light mode) -->
-                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                        </svg>
-                    </button>
-                    <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy-dark dark:text-white/80 hover:text-navy-mid dark:hover:text-white" aria-label="Menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
+                    <!-- Mobile Menu - Visible inline -->
+                    <div class="flex items-center gap-1 sm:gap-2 lg:hidden">
+                        <a href="servicos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-600/10 transition-colors">Serviços</a>
+                        <a href="produtos.html" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-600/10 transition-colors">Produtos</a>
+                        <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-white/80 text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-1.5 rounded hover:bg-slate-600/10 transition-colors">Cliente</a>
+                        <a href="contato.html" class="bg-emerald-600 text-white text-[10px] sm:text-xs font-semibold px-2 py-1.5 rounded transition-colors">Assistência</a>
+                        <!-- Theme toggle mobile -->
 
-                <!-- Desktop menu - Centered -->
-                <div class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-navy-dark dark:text-white font-medium hover:text-navy-mid dark:hover:text-blue-accent transition-colors">Início</a>
-                    <a href="#sobre" class="text-navy-dark/70 dark:text-white/70 font-medium hover:text-navy-dark dark:hover:text-white transition-colors">Sobre Nós</a>
-                    <a href="servicos.html" class="text-navy-dark/70 dark:text-white/70 font-medium hover:text-navy-dark dark:hover:text-white transition-colors">Serviços</a>
-                    <a href="produtos.html" class="text-navy-dark/70 dark:text-white/70 font-medium hover:text-navy-dark dark:hover:text-white transition-colors">Produtos</a>
-                    <a href="contato.html" class="text-navy-dark/70 dark:text-white/70 font-medium hover:text-navy-dark dark:hover:text-white transition-colors">Contato</a>
-                    <a href="orcamento.html" class="text-navy-mid dark:text-blue-accent font-bold hover:text-navy-dark dark:hover:text-white transition-colors">Solicitar Orçamento</a>
-                    <!-- Theme toggle desktop -->
-                    <button id="theme-toggle-desktop" class="theme-toggle p-2 rounded-lg text-navy-dark dark:text-white/80 hover:text-navy-mid dark:hover:text-white hover:bg-navy-light/10 dark:hover:bg-white/10" aria-label="Alternar tema">
-                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                        </svg>
-                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                        </svg>
-                    </button>
+                    </div>
+
+                    <!-- Desktop menu - Centered -->
+                    <div class="hidden lg:flex items-center gap-8">
+                        <a href="index.html" class="text-white font-medium hover:text-slate-200 transition-colors">Início</a>
+                        <a href="#sobre" class="text-white/70 font-medium hover:text-white transition-colors">Sobre Nós</a>
+                        <a href="servicos.html" class="text-white/70 font-medium hover:text-white transition-colors">Serviços</a>
+                        <a href="produtos.html" class="text-white/70 font-medium hover:text-white transition-colors">Produtos</a>
+                        <a href="contato.html" class="text-white/70 font-medium hover:text-white transition-colors">Solicitar Assistência Técnica</a>
+                        <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-white/70 font-medium hover:text-white transition-colors">Área do Cliente</a>
+                        <!-- Theme toggle desktop -->
+
+                    </div>
                 </div>
             </nav>
-        </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden glass">
-            <div class="container mx-auto px-4 py-4 flex flex-col gap-2">
-                <a href="index.html" class="text-navy-dark dark:text-white font-medium py-2 px-4 rounded hover:bg-navy-light/10 dark:hover:bg-white/10">Início</a>
-                <a href="#sobre" class="text-navy-dark/70 dark:text-white/70 font-medium py-2 px-4 rounded hover:bg-navy-light/10 dark:hover:bg-white/10">Sobre Nós</a>
-                <a href="servicos.html" class="text-navy-dark/70 dark:text-white/70 font-medium py-2 px-4 rounded hover:bg-navy-light/10 dark:hover:bg-white/10">Serviços</a>
-                <a href="produtos.html" class="text-navy-dark/70 dark:text-white/70 font-medium py-2 px-4 rounded hover:bg-navy-light/10 dark:hover:bg-white/10">Produtos</a>
-                <a href="contato.html" class="text-navy-dark/70 dark:text-white/70 font-medium py-2 px-4 rounded hover:bg-navy-light/10 dark:hover:bg-white/10">Contato</a>
-                <a href="orcamento.html" class="text-navy-mid dark:text-blue-accent font-bold py-2 px-4 rounded hover:bg-navy-light/10 dark:hover:bg-white/10">Solicitar Orçamento</a>
-            </div>
         </div>
     </header>
 
@@ -281,34 +187,34 @@
         <div class="absolute inset-0 z-0">
             <img src="imagens/background2.jpeg" alt="" class="w-full h-full object-cover object-center">
             <!-- Overlay - Light: suave / Dark: Gradiente Azul Marinho Corporativo Suave -->
-            <div class="absolute inset-0 hero-overlay bg-gradient-to-br from-slate-50/95 via-slate-100/90 to-sky-100/85 dark:bg-gradient-to-br dark:from-[#1e3a8a]/95 dark:via-[#1e3a5c]/92 dark:to-[#172554]/95"></div>
+            <div class="absolute inset-0 hero-overlay bg-gradient-to-br from-slate-50/95 via-slate-100/90 to-sky-100/85"></div>
             <!-- Pattern overlay - sutil -->
-            <div class="absolute inset-0 pattern-overlay opacity-50 dark:opacity-20"></div>
+            <div class="absolute inset-0 pattern-overlay opacity-50"></div>
         </div>
         <!-- Decorative elements - azuis suaves para integração -->
-        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-accent/10 dark:bg-blue-400/10 rounded-full blur-3xl z-[1]"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-red-accent/10 dark:bg-blue-300/8 rounded-full blur-3xl z-[1]"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-navy-light/10 dark:bg-blue-500/5 rounded-full blur-3xl z-[1]"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-slate-700/10 rounded-full blur-3xl z-[1]"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl z-[1]"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-slate-600/10 rounded-full blur-3xl z-[1]"></div>
 
         <div class="container mx-auto px-4 lg:px-8 py-32 relative z-[2]">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-7xl mx-auto">
                 <!-- Left Content -->
                 <div class="flex-1 text-center lg:text-left">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                        <span class="text-navy-deep dark:text-slate-100">Excelência em</span><br>
-                        <span class="bg-gradient-to-r from-navy-mid to-navy-deep dark:from-blue-300 dark:to-slate-100 bg-clip-text text-transparent">Equipamentos Médicos</span>
+                        <span class="text-slate-900">Assistência Técnica</span><br>
+                        <span class="bg-gradient-to-r from-slate-800 to-slate-900 bg-clip-text text-transparent">especializada em equipamentos hospitalares</span>
                     </h1>
 
-                    <p class="text-xl text-slate-600 dark:text-slate-200/80 mb-10 leading-relaxed max-w-2xl lg:max-w-none">
-                        Mais de <span class="text-navy-deep dark:text-slate-100 font-semibold">10 anos</span> garantindo a segurança do paciente.
-                        Representantes autorizados <span class="text-navy-mid dark:text-blue-300">Toth Lifecare</span> e <span class="text-navy-mid dark:text-blue-300">Medlevensohn</span> no Rio de Janeiro.
+                    <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl lg:max-w-none">
+                        Mais de <span class="text-slate-900 font-semibold">10 anos</span> de experiência em manutenção e calibração de equipamentos médicos.
+                        Assistência técnica autorizada <span class="text-slate-800">Toth Lifecare</span> e <span class="text-slate-800">Medlevensohn</span> no Rio de Janeiro.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="contato.html" class="bg-[#000080] hover:bg-blue-900 dark:bg-blue-accent dark:hover:bg-blue-500 text-white px-8 py-4 rounded-sm font-semibold transition-all">
+                        <a href="contato.html" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-sm font-semibold transition-all">
                             Solicitar Orçamento
                         </a>
-                        <a href="servicos.html" class="bg-transparent hover:bg-[#000080]/5 dark:bg-slate-100/10 dark:hover:bg-slate-100/15 text-[#000080] dark:text-slate-100 px-8 py-4 rounded-sm font-semibold transition-all border border-[#000080]/30 dark:border-slate-100/20">
+                        <a href="servicos.html" class="bg-transparent hover:bg-slate-900/5 text-slate-900 px-8 py-4 rounded-sm font-semibold transition-all border border-[#0A192F]/30">
                             Nossos Serviços
                         </a>
                     </div>
@@ -318,76 +224,60 @@
                 <div class="flex-shrink-0 w-full max-w-xs sm:max-w-sm lg:max-w-md">
                     <!-- Light Mode: Card escuro / Dark Mode: Branco Gelo translúcido com sombra azulada -->
                     <div class="relative rounded-lg overflow-hidden
-                        shadow-2xl bg-gradient-to-br from-navy-deep via-navy-dark to-navy-mid
-                        dark:bg-gradient-to-br dark:from-slate-50/95 dark:via-white/95 dark:to-slate-100/95
-                        dark:shadow-[0_20px_50px_-15px_rgba(30,58,138,0.25)]
-                        dark:border dark:border-white/30 dark:backdrop-blur-sm">
+                        shadow-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800
+
+
+">
 
                         <!-- Background image - apenas light mode -->
-                        <div class="absolute inset-0 opacity-20 dark:opacity-0">
+                        <div class="absolute inset-0 opacity-20">
                             <img src="imagens/background2.jpeg" alt="" class="w-full h-full object-cover mix-blend-overlay">
                         </div>
 
                         <!-- Decorative elements - sutis -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-accent/20 dark:bg-blue-500/8 rounded-full blur-2xl"></div>
-                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-red-accent/20 dark:bg-blue-400/5 rounded-full blur-2xl"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-slate-700/20 rounded-full blur-2xl"></div>
+                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-emerald-600/20 rounded-full blur-2xl"></div>
 
                         <!-- Content -->
-                        <div class="relative p-8">
+                        <div class="relative p-6">
                             <!-- Header with icon -->
                             <div class="flex items-start justify-between mb-6">
                                 <div>
-                                    <span class="inline-block text-blue-accent dark:text-blue-700 text-xs font-semibold uppercase tracking-wider mb-1">Especialistas</span>
-                                    <h3 class="text-2xl font-bold text-white dark:text-slate-800 leading-tight">Assistência Técnica<br>Autorizada</h3>
+                                    <span class="inline-block text-slate-700 text-xs font-semibold uppercase tracking-wider mb-1">Especialistas</span>
+                                    <h3 class="text-2xl font-bold text-white leading-tight">Assistência Técnica<br>Autorizada</h3>
                                 </div>
-                                <div class="w-12 h-12 bg-white/10 dark:bg-blue-50 backdrop-blur-sm rounded-md flex items-center justify-center dark:shadow-sm dark:border dark:border-blue-100">
-                                    <svg class="w-6 h-6 text-blue-accent dark:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div class="w-12 h-12 bg-slate-50/10 backdrop-blur-sm rounded-md flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                     </svg>
                                 </div>
                             </div>
 
                             <!-- Stats highlight -->
-                            <div class="bg-white/5 dark:bg-blue-50/80 backdrop-blur-sm rounded-md p-4 mb-6 border border-white/10 dark:border-blue-100">
+                            <div class="bg-slate-50/5 backdrop-blur-sm rounded-md p-4 mb-5 border border-white/10">
                                 <div class="flex items-center gap-4">
                                     <div class="text-center">
-                                        <span class="block text-3xl font-bold text-white dark:text-slate-800">10+</span>
-                                        <span class="text-white/50 dark:text-slate-500 text-xs">Anos</span>
+                                        <span class="block text-3xl font-bold text-white">10+</span>
+                                        <span class="text-white/50 text-xs">Anos</span>
                                     </div>
-                                    <div class="w-px h-10 bg-white/20 dark:bg-blue-200"></div>
+                                    <div class="w-px h-10 bg-slate-50/20"></div>
                                     <div class="flex-1">
-                                        <p class="text-white/70 dark:text-slate-600 text-sm leading-relaxed">Garantindo a <span class="text-white dark:text-slate-800 font-medium">segurança do paciente</span> com equipamentos calibrados</p>
+                                        <p class="text-white/70 text-sm leading-relaxed">Garantindo a <span class="text-white font-medium">segurança do paciente</span> com equipamentos calibrados</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Equipment list -->
-                            <div class="space-y-2 mb-6">
-                                <div class="flex items-center gap-3 text-white/80 dark:text-slate-600 text-sm">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-blue-accent dark:bg-blue-500"></div>
-                                    <span>Desfibriladores e DEA</span>
+                            <!-- Manutenção info -->
+                            <div class="space-y-3">
+                                <div class="bg-white/5 rounded-md p-3 border border-white/10">
+                                    <h4 class="text-white font-semibold text-sm mb-1">Manutenção Preventiva</h4>
+                                    <p class="text-white/60 text-xs leading-relaxed">Evite paradas não programadas e aumente a vida útil dos equipamentos.</p>
                                 </div>
-                                <div class="flex items-center gap-3 text-white/80 dark:text-slate-600 text-sm">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-blue-accent dark:bg-blue-500"></div>
-                                    <span>Bombas de Infusão</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-white/80 dark:text-slate-600 text-sm">
-                                    <div class="w-1.5 h-1.5 rounded-full bg-blue-accent dark:bg-blue-500"></div>
-                                    <span>Monitores e Cardioversores</span>
+                                <div class="bg-white/5 rounded-md p-3 border border-white/10">
+                                    <h4 class="text-white font-semibold text-sm mb-1">Manutenção Corretiva</h4>
+                                    <p class="text-white/60 text-xs leading-relaxed">Diagnóstico rápido e reparo eficiente para minimizar o tempo de inatividade.</p>
                                 </div>
                             </div>
-
-                            <!-- CTA Button - Elegante e sóbrio -->
-                            <a href="produtos.html" class="flex items-center justify-center gap-3 w-full
-                                bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20
-                                dark:bg-[#000080] dark:hover:bg-blue-900
-                                dark:border-0 dark:text-white
-                                px-5 py-3.5 rounded-sm font-semibold transition-all group">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                                </svg>
-                                <span>Conheça nossos produtos</span>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -396,106 +286,106 @@
 
         <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-[2]">
-            <svg class="w-6 h-6 text-slate-400 dark:text-slate-300/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
             </svg>
         </div>
     </section>
 
     <!-- Nossos Serviços - Grid Estático Premium -->
-    <section class="py-16 lg:py-20 bg-white dark:bg-[#020617]">
+    <section class="py-16 lg:py-20 bg-slate-50">
         <div class="container mx-auto px-4 lg:px-8">
             <!-- Header -->
             <div class="text-center mb-12">
-                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[#000080] dark:text-white mb-3">Nossos Serviços</h2>
-                <p class="font-sans text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">Soluções completas em equipamentos médicos com mais de 10 anos de experiência no mercado.</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-slate-900 mb-3">Nossos Serviços</h2>
+                <p class="font-sans text-slate-600 max-w-2xl mx-auto">Soluções completas em equipamentos médicos com mais de 10 anos de experiência no mercado.</p>
             </div>
 
             <!-- Grid de 3 Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
                 <!-- Card 1: Manutenção e Calibração -->
-                <a href="servicos.html#calibracao" class="group h-full bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-white/10 border-t-4 border-t-[#000080] p-8 transition-all hover:shadow-lg dark:hover:border-white/20">
+                <a href="servicos.html#calibracao" class="group h-full bg-white border border-slate-200 border-t-4 border-t-[#0A192F] p-8 transition-all hover:shadow-lg">
                     <div class="mb-6">
-                        <svg class="w-10 h-10 text-[#000080] dark:text-blue-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <svg class="w-10 h-10 text-slate-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-[#000080] dark:text-white mb-4 group-hover:text-blue-900 dark:group-hover:text-blue-accent transition-colors">Manutenção e Calibração</h3>
-                    <p class="font-sans text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">Calibração certificada com rastreabilidade RBC/INMETRO e teste de segurança elétrica conforme IEC 60601.</p>
-                    <ul class="font-sans text-slate-500 dark:text-slate-400 text-sm space-y-2">
+                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-slate-900 mb-4 group-hover:text-slate-700 transition-colors">Manutenção e Calibração</h3>
+                    <p class="font-sans text-slate-600 text-sm leading-relaxed mb-6">Calibração certificada com rastreabilidade RBC/INMETRO e teste de segurança elétrica conforme IEC 60601.</p>
+                    <ul class="font-sans text-slate-400 text-sm space-y-2">
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             DEA e Desfibriladores
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Cardioversores e Monitores
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Bombas de Infusão e Seringa
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Esfigmomanômetros
                         </li>
                     </ul>
                 </a>
 
                 <!-- Card 2: Assistência Técnica -->
-                <a href="servicos.html#assistencia" class="group h-full bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-white/10 border-t-4 border-t-[#000080] p-8 transition-all hover:shadow-lg dark:hover:border-white/20">
+                <a href="servicos.html#assistencia" class="group h-full bg-white border border-slate-200 border-t-4 border-t-[#0A192F] p-8 transition-all hover:shadow-lg">
                     <div class="mb-6">
-                        <svg class="w-10 h-10 text-[#000080] dark:text-blue-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <svg class="w-10 h-10 text-slate-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-[#000080] dark:text-white mb-4 group-hover:text-blue-900 dark:group-hover:text-blue-accent transition-colors">Assistência Técnica</h3>
-                    <p class="font-sans text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">Assistência técnica autorizada Toth Lifecare e Medlevensohn com técnicos certificados pelos fabricantes.</p>
-                    <ul class="font-sans text-slate-500 dark:text-slate-400 text-sm space-y-2">
+                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-slate-900 mb-4 group-hover:text-slate-700 transition-colors">Assistência Técnica</h3>
+                    <p class="font-sans text-slate-600 text-sm leading-relaxed mb-6">Assistência técnica autorizada Toth Lifecare e Medlevensohn com técnicos certificados pelos fabricantes.</p>
+                    <ul class="font-sans text-slate-400 text-sm space-y-2">
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Manutenção Preventiva
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Manutenção Corretiva
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Peças e Acessórios Originais
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Treinamentos DEA
                         </li>
                     </ul>
                 </a>
 
                 <!-- Card 3: Venda e Locação -->
-                <a href="produtos.html" class="group h-full bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-white/10 border-t-4 border-t-[#000080] p-8 transition-all hover:shadow-lg dark:hover:border-white/20">
+                <a href="produtos.html" class="group h-full bg-white border border-slate-200 border-t-4 border-t-[#0A192F] p-8 transition-all hover:shadow-lg">
                     <div class="mb-6">
-                        <svg class="w-10 h-10 text-[#000080] dark:text-blue-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <svg class="w-10 h-10 text-slate-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-[#000080] dark:text-white mb-4 group-hover:text-blue-900 dark:group-hover:text-blue-accent transition-colors">Venda e Locação</h3>
-                    <p class="font-sans text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">Representantes autorizados Toth Lifecare. Equipamentos de alta tecnologia para sua instituição.</p>
-                    <ul class="font-sans text-slate-500 dark:text-slate-400 text-sm space-y-2">
+                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-slate-900 mb-4 group-hover:text-slate-700 transition-colors">Venda e Locação</h3>
+                    <p class="font-sans text-slate-600 text-sm leading-relaxed mb-6">Representantes autorizados Toth Lifecare. Equipamentos de alta tecnologia para sua instituição.</p>
+                    <ul class="font-sans text-slate-400 text-sm space-y-2">
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             DEA EasyShock
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Monitor SmartCheck
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Ultrassom Portátil
                         </li>
                         <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-[#000080] dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                             Toth Watch
                         </li>
                     </ul>
@@ -504,7 +394,7 @@
 
             <!-- CTA -->
             <div class="text-center mt-12">
-                <a href="servicos.html" class="inline-flex items-center gap-2 bg-[#000080] hover:bg-blue-900 dark:bg-blue-accent dark:hover:bg-blue-500 text-white px-8 py-3.5 rounded-sm font-semibold transition-all">
+                <a href="servicos.html" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-3.5 rounded-sm font-semibold transition-all">
                     Ver Todos os Serviços
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -515,63 +405,56 @@
     </section>
 
     <!-- Sobre Nós -->
-    <section id="sobre" class="py-20 lg:py-28 bg-slate-50 dark:bg-[#0F172A]">
+    <section id="sobre" class="py-20 lg:py-28 bg-white">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
 
                 <!-- Carrossel de Fotos - Vitrine Tecnológica Interativa -->
                 <div class="flex-1 w-full max-w-lg mx-auto lg:mx-0">
-                    <div class="group/spotlight border-2 border-[#000080]/30 dark:border-white/20 rounded-lg bg-white dark:bg-white/5 p-4
-                                hover:border-[#000080] dark:hover:border-blue-accent hover:shadow-xl hover:shadow-blue-900/15 dark:hover:shadow-blue-500/10
+                    <div class="group/spotlight border-2 border-[#0A192F]/30 rounded-lg bg-white p-4
+                                hover:border-[#0A192F] hover:shadow-xl hover:shadow-slate-800/15
                                 transition-all duration-300 ease-in-out cursor-pointer">
 
                         <!-- Carousel Container -->
                         <div id="carousel" class="relative overflow-hidden rounded-md">
                             <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
-                                <div class="carousel-slide min-w-[50%] md:min-w-full px-1 md:px-0">
-                                    <div class="w-full h-56 md:h-80 bg-slate-100 dark:bg-navy-deep/50 rounded-md flex items-center justify-center overflow-hidden">
-                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.32.jpeg" alt="Treinamento DEA - Win Service"
+                                <div class="carousel-slide min-w-full">
+                                    <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
+                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.34 (1).jpeg" alt="Treinamento DEA - Win Service"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
-                                    <p class="font-body text-slate-500 dark:text-white/50 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-[#000080] dark:group-hover/spotlight:text-blue-accent transition-colors duration-300">Treinamento de DEA</p>
+                                    <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Treinamento DEA</p>
                                 </div>
-                                <div class="carousel-slide min-w-[50%] md:min-w-full px-1 md:px-0">
-                                    <div class="w-full h-56 md:h-80 bg-slate-100 dark:bg-navy-deep/50 rounded-md flex items-center justify-center overflow-hidden">
-                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.32 (1).jpeg" alt="Capacitação Técnica - Win Service"
+                                <div class="carousel-slide min-w-full">
+                                    <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
+                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (2).jpeg" alt="Equipamentos de Alta Tecnologia - Win Service"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
-                                    <p class="font-body text-slate-500 dark:text-white/50 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-[#000080] dark:group-hover/spotlight:text-blue-accent transition-colors duration-300">Capacitação Técnica</p>
+                                    <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Equipamentos de Alta Tecnologia</p>
                                 </div>
-                                <div class="carousel-slide min-w-[50%] md:min-w-full px-1 md:px-0">
-                                    <div class="w-full h-56 md:h-80 bg-slate-100 dark:bg-navy-deep/50 rounded-md flex items-center justify-center overflow-hidden">
-                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.35.jpeg" alt="Equipamentos Medlevensohn - Win Service"
+                                <div class="carousel-slide min-w-full">
+                                    <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
+                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (3).jpeg" alt="Assistência Técnica Autorizada - Win Service"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
-                                    <p class="font-body text-slate-500 dark:text-white/50 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-[#000080] dark:group-hover/spotlight:text-blue-accent transition-colors duration-300">Equipamentos Medlevensohn</p>
+                                    <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Assistência Técnica Autorizada</p>
                                 </div>
-                                <div class="carousel-slide min-w-[50%] md:min-w-full px-1 md:px-0">
-                                    <div class="w-full h-56 md:h-80 bg-slate-100 dark:bg-navy-deep/50 rounded-md flex items-center justify-center overflow-hidden">
-                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (2).jpeg" alt="Equipamentos Toth Lifecare - Win Service"
+                                <div class="carousel-slide min-w-full">
+                                    <div class="w-full h-56 md:h-80 bg-slate-100 rounded-md flex items-center justify-center overflow-hidden">
+                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.33.jpeg" alt="Equipe Especializada - Win Service"
                                              class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
                                     </div>
-                                    <p class="font-body text-slate-500 dark:text-white/50 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-[#000080] dark:group-hover/spotlight:text-blue-accent transition-colors duration-300">Equipamentos Toth Lifecare</p>
-                                </div>
-                                <div class="carousel-slide min-w-[50%] md:min-w-full px-1 md:px-0">
-                                    <div class="w-full h-56 md:h-80 bg-slate-100 dark:bg-navy-deep/50 rounded-md flex items-center justify-center overflow-hidden">
-                                        <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (3).jpeg" alt="Assistência Técnica - Win Service"
-                                             class="max-w-full max-h-full object-contain brightness-[0.97] group-hover/spotlight:brightness-110 group-hover/spotlight:scale-[1.02] transition-all duration-300 ease-in-out">
-                                    </div>
-                                    <p class="font-body text-slate-500 dark:text-white/50 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-[#000080] dark:group-hover/spotlight:text-blue-accent transition-colors duration-300">Assistência Técnica</p>
+                                    <p class="font-body text-slate-500 text-xs uppercase tracking-wider text-center mt-3 group-hover/spotlight:text-slate-900 transition-colors duration-300">Equipe Especializada</p>
                                 </div>
                             </div>
 
                             <!-- Navigation Arrows - Modernos -->
-                            <button id="carousel-prev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/80 dark:bg-navy-dark/80 text-[#000080] dark:text-white/80 hover:bg-[#000080] hover:text-white dark:hover:bg-blue-accent dark:hover:text-white shadow-sm hover:shadow-md transition-all duration-200 z-10 opacity-0 group-hover/spotlight:opacity-100">
+                            <button id="carousel-prev" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-slate-900 hover:bg-slate-900 hover:text-white shadow-sm hover:shadow-md transition-all duration-200 z-10 opacity-0 group-hover/spotlight:opacity-100">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
                                 </svg>
                             </button>
-                            <button id="carousel-next" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/80 dark:bg-navy-dark/80 text-[#000080] dark:text-white/80 hover:bg-[#000080] hover:text-white dark:hover:bg-blue-accent dark:hover:text-white shadow-sm hover:shadow-md transition-all duration-200 z-10 opacity-0 group-hover/spotlight:opacity-100">
+                            <button id="carousel-next" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 text-slate-900 hover:bg-slate-900 hover:text-white shadow-sm hover:shadow-md transition-all duration-200 z-10 opacity-0 group-hover/spotlight:opacity-100">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
                                 </svg>
@@ -579,48 +462,46 @@
                         </div>
 
                         <!-- Dots Indicator - Elegantes -->
-                        <div class="flex justify-center gap-2.5 mt-5">
-                            <button class="carousel-dot w-2 h-2 rounded-full bg-[#000080] dark:bg-blue-accent transition-all duration-300" data-index="0"></button>
-                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-[#000080]/50 dark:hover:bg-blue-accent/50 transition-all duration-300" data-index="1"></button>
-                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-[#000080]/50 dark:hover:bg-blue-accent/50 transition-all duration-300 md:hidden" data-index="2"></button>
-                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-[#000080]/50 dark:hover:bg-blue-accent/50 transition-all duration-300 hidden md:block" data-index="2"></button>
-                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-[#000080]/50 dark:hover:bg-blue-accent/50 transition-all duration-300 hidden md:block" data-index="3"></button>
-                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-[#000080]/50 dark:hover:bg-blue-accent/50 transition-all duration-300 hidden md:block" data-index="4"></button>
+                        <div id="carousel-dots" class="flex justify-center gap-2 mt-5">
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-900 transition-all duration-300" data-index="0"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-900/50 transition-all duration-300" data-index="1"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-900/50 transition-all duration-300" data-index="2"></button>
+                            <button class="carousel-dot w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-900/50 transition-all duration-300" data-index="3"></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Conteúdo Textual -->
                 <div class="flex-1">
-                    <span class="font-body text-xs uppercase tracking-widest text-gray-400 dark:text-white/40 mb-4 block">Sobre Nós</span>
-                    <h2 class="font-heading text-3xl md:text-4xl font-semibold text-[#1a3a5c] dark:text-white mb-6 tracking-tight">Tradição e Tecnologia</h2>
+                    <span class="font-body text-xs uppercase tracking-widest text-gray-400 mb-4 ">Sobre Nós</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-semibold text-[#1a3a5c] mb-6 tracking-tight">Tradição e Tecnologia</h2>
 
-                    <p class="font-body text-gray-600 dark:text-white/70 mb-8 leading-relaxed text-base lg:text-lg">
-                        Fundada na excelência e movida pela precisão. Há mais de uma década, a Win Service eleva o padrão da manutenção hospitalar no Rio de Janeiro. Nosso laboratório conta com instrumentação de ponta e técnicos certificados pelos maiores fabricantes do mercado, garantindo rigor metrológico e segurança para o paciente.
+                    <p class="font-body text-gray-600 mb-8 leading-relaxed text-base lg:text-lg">
+                        Uma empresa com equipe de técnicos treinados e especializados para atender aos padrões de excelência e qualidade na prestação de serviço hospitalar, proporcionando um serviço diferenciado a você, nosso cliente. Manutenção preventiva, corretiva e especializada em equipamentos médicos hospitalares.
                     </p>
 
                     <!-- Citação com borda lateral -->
-                    <div class="border-l-4 border-[#1a3a5c] dark:border-blue-accent pl-5 py-2 mb-10">
-                        <p class="font-body text-gray-700 dark:text-white/80 italic text-sm lg:text-base leading-relaxed">
-                            "Representantes autorizados <span class="text-[#1a3a5c] dark:text-blue-accent font-semibold not-italic">Toth Lifecare</span> para venda, locação e assistência técnica. Assistência técnica autorizada <span class="text-[#1a3a5c] dark:text-blue-accent font-semibold not-italic">Medlevensohn</span>."
+                    <div class="border-l-4 border-[#1a3a5c] pl-5 py-2 mb-10">
+                        <p class="font-body text-gray-700 italic text-sm lg:text-base leading-relaxed">
+                            "Representantes autorizados <span class="text-[#1a3a5c] font-semibold not-italic">Toth Lifecare</span> para venda, locação e assistência técnica. Assistência técnica autorizada <span class="text-[#1a3a5c] font-semibold not-italic">Medlevensohn</span>."
                         </p>
                     </div>
 
                     <!-- Indicadores - Linha contínua com separadores (centralizado) -->
                     <div class="flex items-center justify-center lg:justify-start lg:ml-auto lg:mr-0 max-w-md lg:max-w-none">
                         <div class="text-center px-6 sm:px-8 lg:px-10">
-                            <p class="font-heading text-3xl lg:text-4xl font-semibold text-[#1a3a5c] dark:text-white">10+</p>
-                            <p class="font-body text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 dark:text-white/50 mt-1">Anos de Experiência</p>
+                            <p class="font-heading text-3xl lg:text-4xl font-semibold text-[#1a3a5c]">10+</p>
+                            <p class="font-body text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 mt-1">Anos de Experiência</p>
                         </div>
-                        <div class="border-r border-gray-300 dark:border-white/20 h-12"></div>
+                        <div class="border-r border-gray-300 h-12"></div>
                         <div class="text-center px-6 sm:px-8 lg:px-10">
-                            <p class="font-heading text-3xl lg:text-4xl font-semibold text-[#1a3a5c] dark:text-white">500+</p>
-                            <p class="font-body text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 dark:text-white/50 mt-1">Clientes Atendidos</p>
+                            <p class="font-heading text-3xl lg:text-4xl font-semibold text-[#1a3a5c]">500+</p>
+                            <p class="font-body text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 mt-1">Clientes Atendidos</p>
                         </div>
-                        <div class="border-r border-gray-300 dark:border-white/20 h-12"></div>
+                        <div class="border-r border-gray-300 h-12"></div>
                         <div class="text-center px-6 sm:px-8 lg:px-10">
-                            <p class="font-heading text-3xl lg:text-4xl font-semibold text-[#1a3a5c] dark:text-white">RJ</p>
-                            <p class="font-body text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 dark:text-white/50 mt-1">Área de Atuação</p>
+                            <p class="font-heading text-3xl lg:text-4xl font-semibold text-[#1a3a5c]">RJ</p>
+                            <p class="font-body text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 mt-1">Área de Atuação</p>
                         </div>
                     </div>
                 </div>
@@ -629,90 +510,69 @@
     </section>
 
     <!-- Equipamentos Atendidos -->
-    <section class="py-20 lg:py-24 bg-[#F8F9FA] dark:bg-navy-dark/70">
+    <section class="py-12 lg:py-16 bg-[#F8F9FA]">
         <div class="container mx-auto px-4 lg:px-8">
             <!-- Header -->
             <div class="text-center mb-14 lg:mb-16">
-                <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-semibold text-[#1a3a5c] dark:text-white mb-3 tracking-tight">Equipamentos Atendidos</h2>
-                <p class="font-body text-slate-500 dark:text-white/50 text-base max-w-xl mx-auto">Assistência técnica especializada para diversos equipamentos médicos</p>
+                <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-semibold text-[#1a3a5c] mb-3 tracking-tight">Equipamentos Atendidos</h2>
+                <p class="font-body text-slate-500 text-base max-w-xl mx-auto">Assistência técnica especializada para diversos equipamentos médicos</p>
             </div>
 
-            <!-- Grid de Categorias -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 max-w-5xl mx-auto mb-14">
-
-                <!-- Coluna 1: Cardiologia -->
-                <div class="text-center md:text-left">
-                    <h3 class="font-heading text-lg font-semibold text-[#1a3a5c] dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-white/10">Cardiologia</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>DEA EasyShock</span>
-                        </li>
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Desfibriladores</span>
-                        </li>
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Cardioversores</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 2: Terapia de Infusão -->
-                <div class="text-center md:text-left">
-                    <h3 class="font-heading text-lg font-semibold text-[#1a3a5c] dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-white/10">Terapia de Infusão</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Bombas de Infusão</span>
-                        </li>
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Bombas de Seringa</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 3: Monitoramento & Diagnóstico -->
-                <div class="text-center md:text-left">
-                    <h3 class="font-heading text-lg font-semibold text-[#1a3a5c] dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-white/10">Monitoramento & Diagnóstico</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Monitores Multiparamétricos</span>
-                        </li>
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Esfigmomanômetros</span>
-                        </li>
-                        <li class="flex items-center gap-3 font-body text-slate-600 dark:text-white/70">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span>Ultrassom Portátil</span>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Lista de Equipamentos -->
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 max-w-4xl mx-auto mb-14">
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    DEA EasyShock
+                </span>
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Desfibriladores
+                </span>
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Cardioversores
+                </span>
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Bombas de Infusão
+                </span>
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Bombas de Seringa
+                </span>
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Monitores Multiparamétricos
+                </span>
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Esfigmomanômetros
+                </span>
+                <span class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-md font-body text-slate-700 text-sm">
+                    <svg class="w-4 h-4 text-slate-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Ultrassom Portátil
+                </span>
             </div>
 
             <!-- Botão CTA -->
             <div class="text-center">
-                <a href="servicos.html" class="inline-flex items-center gap-2 bg-[#000080] hover:bg-blue-900 dark:bg-blue-accent dark:hover:bg-blue-500 text-white px-7 py-3.5 rounded-sm font-semibold transition-all">
+                <a href="servicos.html" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-7 py-3.5 rounded-sm font-semibold transition-all">
                     Conheça Nossos Serviços
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -723,55 +583,52 @@
     </section>
 
     <!-- Valores -->
-    <section class="py-16 bg-[#F8FAFC] dark:bg-[#1e293b]">
+    <section class="py-16 bg-[#F8FAFC]">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-10">
-                <h2 class="font-heading text-xl md:text-2xl font-semibold text-[#1a3a5c] dark:text-white tracking-tight">Missão, Visão e Valores</h2>
+                <h2 class="font-heading text-xl md:text-2xl font-semibold text-[#1a3a5c] tracking-tight">Missão, Visão e Valores</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
-                <div class="bg-white dark:bg-white/5 text-center p-6 rounded-md border border-slate-200 dark:border-white/10">
-                    <h3 class="font-serif text-base font-semibold text-[#1a3a5c] dark:text-white mb-3">Missão</h3>
-                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Garantir funcionamento confiável dos equipamentos para salvar vidas.</p>
+                <div class="bg-white text-center p-6 rounded-md border border-slate-200">
+                    <h3 class="font-serif text-base font-semibold text-[#1a3a5c] mb-3">Missão</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Garantir funcionamento confiável dos equipamentos para salvar vidas.</p>
                 </div>
 
-                <div class="bg-white dark:bg-white/5 text-center p-6 rounded-md border border-slate-200 dark:border-white/10">
-                    <h3 class="font-serif text-base font-semibold text-[#1a3a5c] dark:text-white mb-3">Visão</h3>
-                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Ser referência em excelência e inovação no setor.</p>
+                <div class="bg-white text-center p-6 rounded-md border border-slate-200">
+                    <h3 class="font-serif text-base font-semibold text-[#1a3a5c] mb-3">Visão</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Ser referência em excelência e inovação no setor.</p>
                 </div>
 
-                <div class="bg-white dark:bg-white/5 text-center p-6 rounded-md border border-slate-200 dark:border-white/10">
-                    <h3 class="font-serif text-base font-semibold text-[#1a3a5c] dark:text-white mb-3">Valores</h3>
-                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Qualidade, ética e segurança do paciente.</p>
+                <div class="bg-white text-center p-6 rounded-md border border-slate-200">
+                    <h3 class="font-serif text-base font-semibold text-[#1a3a5c] mb-3">Valores</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Qualidade, ética e segurança do paciente.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA - Institutional Premium -->
-    <section class="py-24 bg-[#000080] dark:bg-[#0F172A] relative">
+    <section class="py-24 bg-slate-900 relative">
         <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h2 class="font-serif text-3xl md:text-4xl font-semibold text-white mb-6 tracking-tight">Precisa de Assistência Técnica?</h2>
             <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto">Entre em contato e solicite um orçamento sem compromisso. Nossa equipe está pronta para atender.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/5521981353322" target="_blank" class="inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-[#000080] dark:text-navy-dark px-8 py-4 rounded-sm font-semibold transition-all">
+            <div class="flex justify-center">
+                <a href="https://wa.me/5521981353322" target="_blank" class="inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-sm font-semibold transition-all">
                     <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                     </svg>
-                    Falar pelo WhatsApp
-                </a>
-                <a href="contato.html" class="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border border-white/40 hover:border-white/60 px-8 py-4 rounded-sm font-semibold transition-all">
-                    Ver Contatos
+                    Fale com nossa equipe
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Parceiros Oficiais -->
-    <section class="py-12 bg-white dark:bg-[#020617] border-t border-slate-200 dark:border-white/5">
+    <section class="py-12 bg-slate-50 border-t border-slate-200">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <p class="text-slate-500 dark:text-white/50 font-medium uppercase tracking-wider text-sm">Parceiros Oficiais</p>
+                <p class="text-slate-500 font-medium uppercase tracking-wider text-sm">Parceiros Oficiais</p>
                 <div class="flex items-center gap-4">
                     <div class="glass-card px-6 py-3 rounded-md">
                         <img src="imagens/toth.png" alt="Toth Lifecare" class="h-10 object-contain">
@@ -785,60 +642,55 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-50 dark:bg-[#020617] border-t border-slate-200 dark:border-white/5 py-16">
-        <div class="container mx-auto px-4 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <div>
-                    <!-- Logo Light Mode -->
-                    <img src="imagens/win_fundotransp (1).png" alt="Win Service" class="h-16 max-w-[220px] object-contain mb-4 block dark:hidden">
-                    <!-- Logo Dark Mode -->
-                    <img src="imagens/logo_letras_branca.png" alt="Win Service" class="h-16 max-w-[220px] object-contain mb-4 hidden dark:block">
-                    <p class="text-slate-500 dark:text-white/50 text-sm">Assistência Técnica Autorizada em Equipamentos Médicos.</p>
+    <footer class="bg-slate-900 border-t border-slate-800 py-10 md:py-14">
+        <div class="container mx-auto px-4 lg:px-8 max-w-6xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-10">
+                <!-- Logo + descrição (visível em todos os tamanhos) -->
+                <div class="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
+                    <img src="imagens/logo_letras_branca.png" alt="Win Service" class="h-12 md:h-14 max-w-[180px] md:max-w-[200px] object-contain mx-auto sm:mx-0 mb-4">
+                    <p class="text-slate-400 text-sm">Assistência Técnica Autorizada em Equipamentos Médicos.</p>
                 </div>
 
-                <div>
-                    <h4 class="font-semibold text-navy-deep dark:text-white mb-4">Links</h4>
-                    <ul class="space-y-2 text-sm text-slate-500 dark:text-white/50">
-                        <li><a href="index.html" class="hover:text-navy-dark dark:hover:text-white transition-colors">Início</a></li>
-                        <li><a href="#sobre" class="hover:text-navy-dark dark:hover:text-white transition-colors">Sobre Nós</a></li>
-                        <li><a href="servicos.html" class="hover:text-navy-dark dark:hover:text-white transition-colors">Serviços</a></li>
-                        <li><a href="contato.html" class="hover:text-navy-dark dark:hover:text-white transition-colors">Contato</a></li>
+                <!-- Links -->
+                <div class="text-center sm:text-left">
+                    <h4 class="font-semibold text-white mb-4 text-sm">Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="contato.html" class="hover:text-white transition-colors">Assistência Técnica</a></li>
                     </ul>
                 </div>
 
-                <div>
-                    <h4 class="font-semibold text-navy-deep dark:text-white mb-4">Contato</h4>
-                    <ul class="space-y-2 text-sm text-slate-500 dark:text-white/50">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Contato -->
+                <div class="text-center sm:text-left">
+                    <h4 class="font-semibold text-white mb-4 text-sm">Contato</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-center justify-center sm:justify-start gap-2">
+                            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                             </svg>
-                            (21) 98135-3322
+                            <span>(21) 98135-3322</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                            contato@winservicerj.com.br
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                            <a href="https://instagram.com/winservicerj" target="_blank" class="hover:text-navy-dark dark:hover:text-white transition-colors">@winservicerj</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-navy-mid dark:text-blue-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <li class="flex items-center justify-center sm:justify-start gap-2">
+                            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
-                            Seg - Sex: 08h às 17h
+                            <span>08h às 17h</span>
+                        </li>
+                        <li class="flex items-center justify-center sm:justify-start gap-2">
+                            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            <a href="https://instagram.com/winservicerj" target="_blank" class="hover:text-white transition-colors">@winservicerj</a>
                         </li>
                     </ul>
                 </div>
 
-                <div>
-                    <h4 class="font-semibold text-navy-deep dark:text-white mb-4">Endereço</h4>
-                    <p class="text-sm text-slate-500 dark:text-white/50">
+                <!-- Endereço -->
+                <div class="text-center sm:text-left">
+                    <h4 class="font-semibold text-white mb-4 text-sm">Endereço</h4>
+                    <p class="text-sm text-slate-400">
                         Rua José Bonifácio, 1050<br>
                         Sala 1107, Bloco 1<br>
                         Todos os Santos, RJ<br>
@@ -847,61 +699,21 @@
                 </div>
             </div>
 
-            <div class="border-t border-slate-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-slate-400 dark:text-white/40">&copy; 2026 Win Service. Todos os direitos reservados.</p>
-                <a href="https://instagram.com/winservicerj" target="_blank" class="text-slate-400 dark:text-white/40 hover:text-navy-dark dark:hover:text-white transition-colors">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </a>
+            <div class="border-t border-slate-700 pt-6 text-center">
+                <p class="text-sm text-slate-400">&copy; 2026 Win Service. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float - Refined -->
+    <!-- WhatsApp Float - Mobile Friendly -->
     <a href="https://wa.me/5521981353322" target="_blank"
-       class="fixed bottom-6 right-6 bg-white dark:bg-navy-mid border border-slate-200 dark:border-white/10 hover:border-green-500 dark:hover:border-green-500 p-3.5 rounded-sm shadow-sm hover:shadow-md transition-all z-40 group">
+       class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white border border-slate-200 hover:border-green-500 p-3 sm:p-3.5 rounded-full sm:rounded-sm shadow-lg hover:shadow-xl transition-all z-50 group">
         <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
-    <script>
-        // Theme Toggle
-        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-        const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
-        const htmlElement = document.documentElement;
-
-        // Check for saved theme preference or default to 'dark'
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        if (savedTheme === 'dark') {
-            htmlElement.classList.add('dark');
-        } else {
-            htmlElement.classList.remove('dark');
-        }
-
-        function toggleTheme() {
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        themeToggleMobile.addEventListener('click', toggleTheme);
-        themeToggleDesktop.addEventListener('click', toggleTheme);
-
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        });
-
-        // Carousel
+    <script>// Carousel
         const carouselTrack = document.getElementById('carousel-track');
         const prevBtn = document.getElementById('carousel-prev');
         const nextBtn = document.getElementById('carousel-next');
@@ -914,23 +726,18 @@
         }
 
         function getTotalSteps() {
-            // Mobile: 5 slides at 50% each = 3 steps (0, 1, 2 showing pairs 0-1, 2-3, 4-5)
-            // Desktop: 5 slides at 100% each = 5 steps
-            return isMobileCarousel() ? 3 : 5;
+            const slides = document.querySelectorAll('.carousel-slide');
+            return slides.length; // Retorna o número de slides dinamicamente
         }
 
         function updateCarousel() {
-            const slideWidth = isMobileCarousel() ? 50 : 100;
+            const slideWidth = 100; // Sempre 100% (mostra 1 slide por vez)
             carouselTrack.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
 
-            // Update dots - only visible ones for current mode
+            // Update dots
             dots.forEach((dot, index) => {
-                const isVisible = isMobileCarousel() ? index < 3 : true;
-                if (isVisible) {
-                    dot.classList.toggle('bg-blue-accent', index === currentSlide);
-                    dot.classList.toggle('bg-slate-300', index !== currentSlide);
-                    dot.classList.toggle('dark:bg-white/30', index !== currentSlide);
-                }
+                dot.classList.toggle('bg-slate-900', index === currentSlide);
+                dot.classList.toggle('bg-slate-300', index !== currentSlide);
             });
         }
 
@@ -971,6 +778,33 @@
             currentSlide = 0;
             updateCarousel();
         });
+
+        // Touch/Swipe support
+        const carousel = document.getElementById('carousel');
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+                resetAutoPlay();
+            }
+        }
     </script>
 </body>
 </html>
