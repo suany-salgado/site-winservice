@@ -1,0 +1,104 @@
+DOCUMENTAÇÃO MESTRA DO PROJETO: WIN SERVICE 2.0
+1. Visão Geral do Produto (Product Overview)
+Cliente: Win Service (Rio de Janeiro)
+Nicho: Assistência Técnica Especializada em Equipamentos Médicos.
+Objetivo: Reposicionar a marca como autoridade técnica, destacar as parcerias oficiais (Toth Lifecare e Medlevensohn) e captar leads qualificados (Hospitais e Clínicas) para manutenção e calibração.
+Restrição Mandatória: Não utilizar os termos "Engenharia Clínica" como título principal, nem mencionar "Manutenção de Móveis/Camas/Longarinas".
+
+2. Identidade Visual (UI Guidelines)
+Logotipo: Utilizar arquivo Win Service logo.pdf (Conceito: Tipografia forte com cruz vermelha).
+
+Paleta de Cores:
+
+Primary (Institucional): #000080 (Azul Marinho - Profundidade, Confiança).
+
+Background (Limpeza): #FFFFFF (Branco Clínico - Higiene, Clareza).
+
+Accent/CTA (Ação/Urgência): #FF0000 (Vermelho - Botões de Conversão e Detalhes da Cruz).
+
+Text (Leitura): #333333 (Cinza Chumbo para parágrafos) e #000080 (Azul para Títulos).
+
+Tipografia:
+
+Headings: Montserrat ou Roboto (Bold/ExtraBold).
+
+Body: Open Sans ou Lato (Regular/Light).
+
+Estilo Fotográfico: Imagens "Macro" (close-up) de equipamentos de alta tecnologia (Bombas, Monitores). Ambientes estéreis. Proibido: Imagens de mobiliário hospitalar.
+
+3. Arquitetura da Informação (Sitemap)
+O site será uma Landing Page Longa (One Page) com navegação suave (anchor links), otimizada para conversão.
+
+Header (Sticky): Logo + Menu + CTA WhatsApp.
+
+Hero Section: Proposta de Valor + Autoridade.
+
+Trust Bar: Logos dos Parceiros (Toth, Medlevensohn).
+
+Sobre Nós: História (10+ Anos) e Expertise.
+
+Serviços (Grid): Divisão clara (Manutenção vs. Venda vs. Calibração).
+
+Equipamentos Atendidos: Lista técnica (SEO).
+
+Diferenciais: Missão/Visão/Valores.
+
+Rodapé: Contatos Completos e Copyright.
+
+4. Estrutura de Conteúdo (Copywriting Final)
+Seção 1: Hero (Dobra Principal)
+H1 (Título): Excelência em Manutenção e Calibração de Equipamentos Médicos no Rio de Janeiro.
+
+H2 (Subtítulo): Mais de 10 anos garantindo a segurança do paciente. Assistência Técnica Autorizada Toth Lifecare e Medlevensohn.
+
+CTA (Botão): Solicitar Orçamento Técnico.
+
+Seção 2: Sobre a Empresa
+Título: Tradição e Tecnologia.
+
+Texto: A Win Service é uma empresa com equipe de técnicos treinados e especializados diretamente pelos fabricantes. Atendemos aos rigorosos padrões de qualidade na prestação de serviço hospitalar, proporcionando manutenção preventiva e corretiva com agilidade.
+
+Highlight: "Exclusividade em assistência técnica, locação e venda de aparelhos Toth Lifecare e Medlevensohn."
+
+Seção 3: Nossos Serviços (Card Grid)
+Card A: Manutenção e Calibração
+
+Manutenção preventiva e corretiva especializada.
+
+Calibração rastreável com emissão de certificados.
+
+Teste de segurança elétrica (IEC 60601).
+
+Qualificação Térmica.
+
+Card B: Venda e Locação
+
+Venda de equipamentos novos (Representante Oficial).
+
+Locação de aparelhos para demandas sazonais.
+
+Ultrassom Setorial Portátil e Analisador IPA 100.
+
+Card C: Peças e Acessórios
+
+Venda de acessórios originais.
+
+Baterias, cabos e sensores.
+
+Seção 4: Equipamentos Atendidos (SEO List)
+Bombas de Infusão.
+
+Desfibriladores e DEA.
+
+Monitores Multiparâmetros e Cardioversores.
+
+Esfigmomanômetros (Aparelhos de Pressão).
+
+Oxímetros e Ventiladores.
+
+Seção 5: Rodapé (Footer)
+Endereço: Rua José Bonifácio, 1050 / Sala 1107, Bloco 1 - Todos os Santos, Rio de Janeiro - CEP 20770-240.
+
+Contato: (21) 98135-3322 | contato@winservicerj.com.br
+
+Horário: Seg a Sex: 08h às 17h.
