@@ -2,7 +2,7 @@ DOCUMENTAÇÃO MESTRA DO PROJETO: WIN SERVICE 2.0
 1. Visão Geral do Produto (Product Overview)
 Cliente: Win Service (Rio de Janeiro)
 Nicho: Assistência Técnica Especializada em Equipamentos Médicos.
-Objetivo: Reposicionar a marca como autoridade técnica, destacar as parcerias oficiais (Toth Lifecare e Medlevensohn) e captar leads qualificados (Hospitais e Clínicas) para manutenção e calibração.
+Objetivo: Reposicionar a marca como autoridade técnica, destacar as parcerias oficiais (Toth Lifecare e MedLevensohn) e captar leads qualificados (Hospitais e Clínicas) para manutenção e calibração.
 Restrição Mandatória: Não utilizar os termos "Engenharia Clínica" como título principal, nem mencionar "Manutenção de Móveis/Camas/Longarinas".
 
 2. Identidade Visual (UI Guidelines)
@@ -33,7 +33,7 @@ Header (Sticky): Logo + Menu + CTA WhatsApp.
 
 Hero Section: Proposta de Valor + Autoridade.
 
-Trust Bar: Logos dos Parceiros (Toth, Medlevensohn).
+Trust Bar: Logos dos Parceiros (Toth, MedLevensohn).
 
 Sobre Nós: História (10+ Anos) e Expertise.
 
@@ -49,7 +49,7 @@ Rodapé: Contatos Completos e Copyright.
 Seção 1: Hero (Dobra Principal)
 H1 (Título): Excelência em Manutenção e Calibração de Equipamentos Médicos no Rio de Janeiro.
 
-H2 (Subtítulo): Mais de 10 anos garantindo a segurança do paciente. Assistência Técnica Autorizada Toth Lifecare e Medlevensohn.
+H2 (Subtítulo): Mais de 10 anos garantindo a segurança do paciente. Assistência Técnica Autorizada Toth Lifecare e MedLevensohn.
 
 CTA (Botão): Solicitar Orçamento Técnico.
 
@@ -58,7 +58,7 @@ Título: Tradição e Tecnologia.
 
 Texto: A Win Service é uma empresa com equipe de técnicos treinados e especializados diretamente pelos fabricantes. Atendemos aos rigorosos padrões de qualidade na prestação de serviço hospitalar, proporcionando manutenção preventiva e corretiva com agilidade.
 
-Highlight: "Exclusividade em assistência técnica, locação e venda de aparelhos Toth Lifecare e Medlevensohn."
+Highlight: "Exclusividade em assistência técnica, locação e venda de aparelhos Toth Lifecare e MedLevensohn."
 
 Seção 3: Nossos Serviços (Card Grid)
 Card A: Manutenção e Calibração
