@@ -283,7 +283,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-28 lg:pt-36 pb-16 lg:pb-20 bg-slate-100 relative overflow-hidden">
+    <section class="pt-28 lg:pt-36 pb-16 lg:pb-20 bg-slate-200 relative overflow-hidden">
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
                 <!-- Texto -->
@@ -305,14 +305,14 @@
                 </div>
                 <!-- Carrossel -->
                 <div class="flex-1 flex justify-center max-w-md">
-                    <div class="glass-card rounded-2xl p-8 w-full">
+                    <div class="bg-white shadow-lg rounded-2xl p-8 w-full">
                         <div class="relative overflow-hidden">
                             <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
-                                    <img src="imagens/dea_fundotransp.png" alt="DEA EasyShock" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                    <img src="imagens/deas1.png" alt="DEA EasyShock" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
-                                    <img src="imagens/monitor_fundotransp.png" alt="Monitor Smart CHECK" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                    <img src="imagens/monitor2_toth .png" alt="Monitor Smart CHECK" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
                                     <img src="imagens/ultrassom_fundotransp.png" alt="Ultrassom Portátil" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
@@ -323,6 +323,12 @@
                                 <div class="w-full flex-shrink-0 flex items-center justify-center">
                                     <img src="imagens/medidor_fundotranps.png" alt="Medidor de Glicemia" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
                                 </div>
+                                <div class="w-full flex-shrink-0 flex items-center justify-center">
+                                    <img src="imagens/monitorpressao_fundotranps.png" alt="Monitor de Pressão Arterial" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                </div>
+                                <div class="w-full flex-shrink-0 flex items-center justify-center">
+                                    <img src="imagens/nebulizador_fundotranps.png" alt="Nebulizador Portátil" width="240" height="220" loading="lazy" decoding="async" class="max-w-[180px] sm:max-w-[240px] h-[180px] sm:h-[220px] object-contain">
+                                </div>
                             </div>
                         </div>
                         <!-- Indicadores -->
@@ -332,6 +338,8 @@
                             <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="2"></button>
                             <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="3"></button>
                             <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="4"></button>
+                            <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="5"></button>
+                            <button class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="6"></button>
                         </div>
                     </div>
                 </div>
@@ -676,7 +684,7 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="py-20 lg:py-24 bg-sky-50 relative">
+    <section class="py-20 lg:py-24 bg-slate-200 relative">
         <div class="container mx-auto px-4 lg:px-8 text-center relative z-10">
             <h2 class="text-2xl md:text-3xl font-serif font-bold text-[#0A192F] mb-4">Pronto para equipar sua instituição?</h2>
             <p class="text-slate-600 mb-8 max-w-xl mx-auto">Orçamento personalizado para equipamentos Toth Lifecare e MedLevensohn. Atendemos todo o Rio de Janeiro.</p>
@@ -779,7 +787,7 @@
         const carousel = document.getElementById('carousel');
         const dots = document.querySelectorAll('.carousel-dot');
         let currentSlide = 0;
-        const totalSlides = 5;
+        const totalSlides = 7;
 
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
