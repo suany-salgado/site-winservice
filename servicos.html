@@ -380,6 +380,12 @@
                                 <div class="w-full flex-shrink-0 flex items-center justify-center p-4">
                                     <img src="imagens/bomba de seringa 2.jpeg" alt="Bomba de Seringa 2" width="600" height="320" loading="lazy" decoding="async" class="max-w-full h-56 md:h-64 object-contain">
                                 </div>
+                                <div class="w-full flex-shrink-0 flex items-center justify-center p-4">
+                                    <img src="imagens/Bomba de Infusão - bbraun.jpeg" alt="Bomba de Infusão B.Braun" width="600" height="320" loading="lazy" decoding="async" class="max-w-full h-56 md:h-64 object-contain">
+                                </div>
+                                <div class="w-full flex-shrink-0 flex items-center justify-center p-4">
+                                    <img src="imagens/Bomba de Nutrição Enteral.jpeg" alt="Bomba de Nutrição Enteral" width="600" height="320" loading="lazy" decoding="async" class="max-w-full h-56 md:h-64 object-contain">
+                                </div>
                             </div>
                         </div>
                         <!-- Indicadores do carrossel -->
@@ -389,6 +395,8 @@
                             <button class="calibracao-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-index="2" aria-label="Slide 3"></button>
                             <button class="calibracao-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-index="3" aria-label="Slide 4"></button>
                             <button class="calibracao-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-index="4" aria-label="Slide 5"></button>
+                            <button class="calibracao-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-index="5" aria-label="Slide 6"></button>
+                            <button class="calibracao-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" data-index="6" aria-label="Slide 7"></button>
                         </div>
                     </div>
 
@@ -754,7 +762,7 @@
                         <img src="imagens/TOTH LOGO HORIZONTAL - AZUL E PRETO (7).png" alt="Toth Lifecare" loading="lazy" decoding="async" class="max-h-7 max-w-full object-contain">
                     </div>
                     <div class="bg-white py-3 px-5 rounded-md shadow-md flex items-center justify-center h-12 w-32 overflow-hidden">
-                        <img src="imagens/LOGO%20MEDLEVENSOHN.png" alt="MedLevensohn" loading="lazy" decoding="async" class="max-w-full object-contain scale-[1.4] translate-y-[1px]">
+                        <img src="imagens/LOGO%20MEDLEVENSOHN.png" alt="MedLevensohn" loading="lazy" decoding="async" class="max-w-full object-contain scale-[1.8]">
                     </div>
                     <div class="bg-white py-3 px-5 rounded-md shadow-md flex items-center justify-center h-12 w-32 overflow-hidden">
                         <img src="imagens/logo_bbraun_tranps.png" alt="B.Braun" loading="lazy" decoding="async" class="max-w-full object-contain scale-[1.5]">
@@ -912,7 +920,7 @@
         const calibracaoDescricao = document.getElementById('calibracao-descricao');
         const calibracaoSpecs = document.getElementById('calibracao-specs');
         let calibracaoSlide = 0;
-        const totalCalibracaoSlides = 5;
+        const totalCalibracaoSlides = 7;
 
         // Dados de cada equipamento
         const equipamentosCalib = [
@@ -940,6 +948,16 @@
                 titulo: "Bomba de Seringa Multicanal",
                 descricao: 'Calibração de <strong class="text-blue-900">bombas de seringa multicanal</strong> com verificação individual de cada canal. Essencial para procedimentos que requerem múltiplas infusões simultâneas.',
                 specs: ["Verificação por canal", "Sincronização de infusões", "Teste de segurança integrado"]
+            },
+            {
+                titulo: "Bomba de Infusão B.Braun",
+                descricao: 'Calibração especializada de <strong class="text-blue-900">bombas de infusão B.Braun</strong>. Equipamentos de alta tecnologia com precisão garantida para administração segura de medicamentos e soluções.',
+                specs: ["Calibração certificada", "Teste de vazão e pressão", "Verificação de alarmes"]
+            },
+            {
+                titulo: "Bomba de Nutrição Enteral",
+                descricao: 'Calibração de <strong class="text-blue-900">bombas de nutrição enteral</strong> para garantir a administração precisa de dietas enterais. Essencial para pacientes em terapia nutricional.',
+                specs: ["Precisão de vazão", "Teste de oclusão", "Verificação de segurança"]
             }
         ];
 

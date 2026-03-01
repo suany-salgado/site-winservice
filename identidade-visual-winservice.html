@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidade Visual do Site - Win Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-navy: #002D62;
+            --deep-space: #0A192F;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-200: #e2e8f0;
+            --slate-50: #f8fafc;
+            --red-medical: #E60000;
+            --clinical-green: #059669;
+            --green-whatsapp: #16a34a;
+        }
+
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .page-break { page-break-before: always; }
+            .no-break { page-break-inside: avoid; }
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+            color: var(--deep-navy);
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            font-size: 28pt;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-size: 16pt;
+            font-weight: 600;
+            border-bottom: 2px solid var(--deep-navy);
+            padding-bottom: 8px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 13pt;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 11pt;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .cover {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--deep-space) 0%, var(--deep-navy) 100%);
+            color: white;
+            margin: -15mm -15mm 30px -15mm;
+            padding: 80px 40px;
+        }
+
+        .cover h1 {
+            color: white;
+            font-size: 32pt;
+            margin-bottom: 10px;
+        }
+
+        .cover .subtitle {
+            font-size: 14pt;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cover .date {
+            font-size: 10pt;
+            opacity: 0.7;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: var(--slate-50);
+            font-weight: 700;
+            color: var(--deep-navy);
+        }
+
+        tr:nth-child(even) {
+            background: #fafbfc;
+        }
+
+        .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            border: 1px solid rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .color-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .color-card .preview {
+            height: 60px;
+        }
+
+        .color-card .info {
+            padding: 10px;
+            background: white;
+        }
+
+        .color-card .name {
+            font-weight: 700;
+            font-size: 10pt;
+            color: var(--slate-800);
+        }
+
+        .color-card .hex {
+            font-family: monospace;
+            font-size: 10pt;
+            color: #64748b;
+        }
+
+        .section-box {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Consolas', monospace;
+            font-size: 9pt;
+            overflow-x: auto;
+            margin: 15px 0;
+            white-space: pre-wrap;
+        }
+
+        .typography-sample {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .blocking-diagram {
+            margin: 20px 0;
+        }
+
+        .block-row {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .block-preview {
+            width: 200px;
+            height: 40px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9pt;
+            font-weight: 600;
+        }
+
+        .block-info {
+            margin-left: 15px;
+            font-size: 10pt;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .footer-doc {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--slate-200);
+            text-align: center;
+            font-size: 9pt;
+            color: #94a3b8;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            border: 1px solid #7dd3fc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
+            font-size: 9pt;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CAPA -->
+    <div class="cover">
+        <h1>Identidade Visual do Site</h1>
+        <p class="subtitle">Guia de Cores, Tipografia e Elementos Visuais</p>
+        <p class="date">Documento gerado em Março de 2026</p>
+    </div>
+
+    <!-- SUMÁRIO -->
+    <h2>Sumário</h2>
+    <table>
+        <tr><td>1. Paleta de Cores</td><td style="text-align:right">2</td></tr>
+        <tr><td>2. Tipografia</td><td style="text-align:right">4</td></tr>
+        <tr><td>3. Color Blocking (Backgrounds)</td><td style="text-align:right">5</td></tr>
+        <tr><td>4. Elementos de Interface</td><td style="text-align:right">6</td></tr>
+        <tr><td>5. Resumo Rápido</td><td style="text-align:right">7</td></tr>
+    </table>
+
+    <!-- SEÇÃO 1: CORES -->
+    <div class="page-break"></div>
+    <h2>1. Paleta de Cores</h2>
+
+    <h3>1.1 Cores Primárias</h3>
+    <p>As cores primárias são a base da identidade visual e devem ser predominantes em todas as aplicações.</p>
+
+    <div class="color-grid">
+        <div class="color-card no-break">
+            <div class="preview" style="background: #002D62;"></div>
+            <div class="info">
+                <p class="name">Deep Navy</p>
+                <p class="hex">#002D62</p>
+                <p style="font-size:9pt; color:#94a3b8; margin-top:5px;">Cor principal, títulos</p>
+            </div>
+        </div>
+        <div class="color-card no-break">
+            <div class="preview" style="background: #0A192F;"></div>
+            <div class="info">
+                <p class="name">Deep Space Blue</p>
+                <p class="hex">#0A192F</p>
+                <p style="font-size:9pt; color:#94a3b8; margin-top:5px;">Seções de destaque</p>
+            </div>
+        </div>
+        <div class="color-card no-break">
+            <div class="preview" style="background: #E60000;"></div>
+            <div class="info">
+                <p class="name">Vermelho</p>
+                <p class="hex">#E60000</p>
+                <p style="font-size:9pt; color:#94a3b8; margin-top:5px;">CTAs de urgência</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>1.2 Cores Secundárias</h3>
+    <div class="color-grid">
+        <div class="color-card no-break">
+            <div class="preview" style="background: #059669;"></div>
+            <div class="info">
+                <p class="name">Clinical Green</p>
+                <p class="hex">#059669</p>
+                <p style="font-size:9pt; color:#94a3b8; margin-top:5px;">Ícones de verificação</p>
+            </div>
+        </div>
+        <div class="color-card no-break">
+            <div class="preview" style="background: #16a34a;"></div>
+            <div class="info">
+                <p class="name">Green WhatsApp</p>
+                <p class="hex">#16a34a</p>
+                <p style="font-size:9pt; color:#94a3b8; margin-top:5px;">Botões de contato</p>
+            </div>
+        </div>
+        <div class="color-card no-break">
+            <div class="preview" style="background: #1e3a8a;"></div>
+            <div class="info">
+                <p class="name">Blue 900</p>
+                <p class="hex">#1e3a8a</p>
+                <p style="font-size:9pt; color:#94a3b8; margin-top:5px;">Títulos secundários</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>1.3 Cores Neutras (Interface)</h3>
+    <table class="no-break">
+        <thead>
+            <tr>
+                <th style="width:60px;">Cor</th>
+                <th>Nome</th>
+                <th>Código HEX</th>
+                <th>Aplicação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="color-box" style="width:40px; height:25px; background:#f8fafc;"></div></td>
+                <td>Slate 50</td>
+                <td><code>#f8fafc</code></td>
+                <td>Fundo principal do body</td>
+            </tr>
+            <tr>
+                <td><div class="color-box" style="width:40px; height:25px; background:#ffffff; border:1px solid #e2e8f0;"></div></td>
+                <td>Branco</td>
+                <td><code>#ffffff</code></td>
+                <td>Cards, formulários</td>
+            </tr>
+            <tr>
+                <td><div class="color-box" style="width:40px; height:25px; background:#e2e8f0;"></div></td>
+                <td>Slate 200</td>
+                <td><code>#e2e8f0</code></td>
+                <td>Bordas, separadores, seções neutras</td>
+            </tr>
+            <tr>
+                <td><div class="color-box" style="width:40px; height:25px; background:#94a3b8;"></div></td>
+                <td>Slate 400</td>
+                <td><code>#94a3b8</code></td>
+                <td>Textos secundários, labels</td>
+            </tr>
+            <tr>
+                <td><div class="color-box" style="width:40px; height:25px; background:#1e293b;"></div></td>
+                <td>Slate 800</td>
+                <td><code>#1e293b</code></td>
+                <td>Texto principal</td>
+            </tr>
+            <tr>
+                <td><div class="color-box" style="width:40px; height:25px; background:#0f172a;"></div></td>
+                <td>Slate 900</td>
+                <td><code>#0f172a</code></td>
+                <td>Header, Footer</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>1.4 Gradientes</h3>
+    <div class="code-block">/* Gradiente Navy - backgrounds gerais */
+background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+
+/* Gradiente Hero - seção principal */
+background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+
+/* Overlay do Hero */
+background: linear-gradient(to-br, rgba(10,25,47,0.85), rgba(10,25,47,0.80), rgba(13,34,64,0.75));</div>
+
+    <!-- SEÇÃO 2: TIPOGRAFIA -->
+    <div class="page-break"></div>
+    <h2>2. Tipografia</h2>
+
+    <h3>2.1 Fontes Principais</h3>
+    <div class="two-columns">
+        <div class="section-box">
+            <h4 style="font-family: 'Lora', serif; font-size: 18pt;">Lora</h4>
+            <p><strong>Família:</strong> Serif</p>
+            <p><strong>Uso:</strong> Títulos (h1, h2, h3, h4)</p>
+            <p><strong>Características:</strong> Transmite tradição, confiança e autoridade</p>
+        </div>
+        <div class="section-box">
+            <h4 style="font-family: 'Lato', sans-serif; font-size: 18pt;">Lato</h4>
+            <p><strong>Família:</strong> Sans-serif</p>
+            <p><strong>Uso:</strong> Corpo de texto, interface</p>
+            <p><strong>Características:</strong> Legibilidade e modernidade</p>
+        </div>
+    </div>
+
+    <h3>2.2 Hierarquia Tipográfica</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Elemento</th>
+                <th>Fonte</th>
+                <th>Peso</th>
+                <th>Line Height</th>
+                <th>Letter Spacing</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>H1</td>
+                <td>Lora</td>
+                <td>700 (Bold)</td>
+                <td>1.2</td>
+                <td>-0.01em</td>
+            </tr>
+            <tr>
+                <td>H2</td>
+                <td>Lora</td>
+                <td>600 (SemiBold)</td>
+                <td>1.2</td>
+                <td>-0.01em</td>
+            </tr>
+            <tr>
+                <td>H3, H4</td>
+                <td>Lora</td>
+                <td>500 (Medium)</td>
+                <td>1.2</td>
+                <td>-0.01em</td>
+            </tr>
+            <tr>
+                <td>Body</td>
+                <td>Lato</td>
+                <td>400 (Regular)</td>
+                <td>1.6</td>
+                <td>0.01em</td>
+            </tr>
+            <tr>
+                <td>Labels</td>
+                <td>Lato</td>
+                <td>600-700</td>
+                <td>1.4</td>
+                <td>0.05em (uppercase)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2.3 Exemplos de Aplicação</h3>
+    <div class="typography-sample">
+        <p style="font-family: 'Lora', serif; font-size: 24pt; font-weight: 700; color: #002D62; margin-bottom: 10px;">Título Principal H1</p>
+        <p style="font-family: 'Lora', serif; font-size: 18pt; font-weight: 600; color: #002D62; margin-bottom: 10px;">Título Secundário H2</p>
+        <p style="font-family: 'Lora', serif; font-size: 14pt; font-weight: 500; color: #002D62; margin-bottom: 10px;">Subtítulo H3</p>
+        <p style="font-family: 'Lato', sans-serif; font-size: 11pt; color: #1e293b;">Este é um exemplo de texto corrido usando a fonte Lato. A combinação de uma fonte serifada para títulos com sans-serif para corpo de texto cria uma hierarquia visual clara e profissional.</p>
+        <p style="font-family: 'Lato', sans-serif; font-size: 9pt; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-top: 10px;">LABEL EM UPPERCASE</p>
+    </div>
+
+    <!-- SEÇÃO 3: COLOR BLOCKING -->
+    <div class="page-break"></div>
+    <h2>3. Color Blocking (Backgrounds)</h2>
+
+    <h3>3.1 Cores dos Blocos de Seção</h3>
+    <p>O site utiliza um sistema de blocos de cores para criar separação visual entre as seções:</p>
+
+    <div class="color-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="color-card no-break">
+            <div class="preview" style="background: #0A192F;"></div>
+            <div class="info">
+                <p class="name">Deep Space Blue</p>
+                <p class="hex">#0A192F</p>
+            </div>
+        </div>
+        <div class="color-card no-break">
+            <div class="preview" style="background: #0f172a;"></div>
+            <div class="info">
+                <p class="name">Slate 900</p>
+                <p class="hex">#0f172a</p>
+            </div>
+        </div>
+        <div class="color-card no-break">
+            <div class="preview" style="background: #ffffff; border: 1px solid #e2e8f0;"></div>
+            <div class="info">
+                <p class="name">Branco</p>
+                <p class="hex">#FFFFFF</p>
+            </div>
+        </div>
+        <div class="color-card no-break">
+            <div class="preview" style="background: #e2e8f0;"></div>
+            <div class="info">
+                <p class="name">Slate 200</p>
+                <p class="hex">#e2e8f0</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>3.2 Padrão de Alternância</h3>
+    <p>O site segue um padrão <strong>claro-escuro-claro</strong> para criar ritmo visual:</p>
+
+    <div class="blocking-diagram">
+        <div class="block-row">
+            <div class="block-preview" style="background: #0A192F; color: white;">HEADER</div>
+            <div class="block-info"><code>#0A192F</code> - Header fixo com blur</div>
+        </div>
+        <div class="block-row">
+            <div class="block-preview" style="background: linear-gradient(135deg, #0A192F 0%, #0d2240 100%); color: white;">HERO</div>
+            <div class="block-info"><code>#0A192F</code> - Overlay sobre imagem</div>
+        </div>
+        <div class="block-row">
+            <div class="block-preview" style="background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b;">SEÇÃO CLARA</div>
+            <div class="block-info"><code>#FFFFFF</code> - Conteúdo principal</div>
+        </div>
+        <div class="block-row">
+            <div class="block-preview" style="background: #e2e8f0; color: #1e293b;">SEÇÃO NEUTRA</div>
+            <div class="block-info"><code>#e2e8f0</code> - Informações, sobre</div>
+        </div>
+        <div class="block-row">
+            <div class="block-preview" style="background: #0A192F; color: white;">DESTAQUE / CTA</div>
+            <div class="block-info"><code>#0A192F</code> - Call-to-action</div>
+        </div>
+        <div class="block-row">
+            <div class="block-preview" style="background: #e2e8f0; color: #1e293b;">PARCEIROS</div>
+            <div class="block-info"><code>#e2e8f0</code> - Seção de parceiros</div>
+        </div>
+        <div class="block-row">
+            <div class="block-preview" style="background: #0f172a; color: white;">FOOTER</div>
+            <div class="block-info"><code>#0f172a</code> - Rodapé</div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong>Princípio:</strong> A alternância entre blocos claros e escuros cria separação visual clara e dá destaque às seções mais importantes.</p>
+    </div>
+
+    <!-- SEÇÃO 4: ELEMENTOS -->
+    <div class="page-break"></div>
+    <h2>4. Elementos de Interface</h2>
+
+    <h3>4.1 Botões</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Background</th>
+                <th>Hover</th>
+                <th>Uso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Primário</td>
+                <td><code>#0f172a</code></td>
+                <td><code>#1e293b</code></td>
+                <td>Ações principais (Enviar, Confirmar)</td>
+            </tr>
+            <tr>
+                <td>Urgência</td>
+                <td><code>#E60000</code></td>
+                <td><code>#cc0000</code></td>
+                <td>Assistência Técnica</td>
+            </tr>
+            <tr>
+                <td>WhatsApp</td>
+                <td><code>#f8fafc</code> + borda</td>
+                <td>Borda verde</td>
+                <td>Contato rápido</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>4.2 Cards e Containers</h3>
+    <ul>
+        <li><strong>Background:</strong> <code>#ffffff</code> (branco)</li>
+        <li><strong>Borda:</strong> <code>1px solid #e2e8f0</code></li>
+        <li><strong>Border-radius:</strong> <code>8px</code> (rounded-lg) ou <code>4px</code> (rounded-sm)</li>
+        <li><strong>Sombra:</strong> <code>shadow-md</code> ou <code>shadow-lg</code></li>
+    </ul>
+
+    <h3>4.3 Efeito Glass (Glassmorphism)</h3>
+    <div class="code-block">.glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}</div>
+
+    <h3>4.4 Estados de Hover</h3>
+    <ul>
+        <li>Transições suaves: <code>transition-colors</code>, <code>transition-all</code></li>
+        <li>Bordas que mudam para <code>#1e3a8a</code> (border-blue-900) no hover</li>
+        <li>Backgrounds que escurecem levemente</li>
+        <li>Sombras que aumentam em cards interativos</li>
+    </ul>
+
+    <h3>4.5 Formulários</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Elemento</th>
+                <th>Estilo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Input/Textarea</td>
+                <td>Fundo branco, borda <code>#e2e8f0</code>, focus: borda <code>#1e3a8a</code></td>
+            </tr>
+            <tr>
+                <td>Labels</td>
+                <td>Uppercase, <code>font-size: 9pt</code>, <code>letter-spacing: 0.05em</code>, cor <code>#64748b</code></td>
+            </tr>
+            <tr>
+                <td>Botão Submit</td>
+                <td>Background <code>#0f172a</code>, texto branco</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SEÇÃO 5: RESUMO -->
+    <div class="page-break"></div>
+    <h2>5. Resumo Rápido</h2>
+
+    <h3>5.1 Paleta Completa</h3>
+    <div class="section-box" style="background: #1e293b; color: white;">
+        <p style="font-family: monospace; font-size: 10pt; line-height: 2;">
+            <strong style="color: #7dd3fc;">CORES PRIMÁRIAS</strong><br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #002D62; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#002D62 — Deep Navy (Cor principal)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #0A192F; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#0A192F — Deep Space Blue (Seções escuras)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #E60000; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#E60000 — Vermelho (CTAs urgentes)<br><br>
+            <strong style="color: #7dd3fc;">CORES SECUNDÁRIAS</strong><br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #059669; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#059669 — Clinical Green (Checks)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #16a34a; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#16a34a — Green WhatsApp<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #1e3a8a; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#1e3a8a — Blue 900 (Títulos)<br><br>
+            <strong style="color: #7dd3fc;">NEUTROS</strong><br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #f8fafc; border: 1px solid #64748b; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#f8fafc — Slate 50 (Background geral)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #ffffff; border: 1px solid #64748b; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#ffffff — Branco (Cards)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #e2e8f0; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#e2e8f0 — Slate 200 (Seções neutras)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #94a3b8; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#94a3b8 — Slate 400 (Texto secundário)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #1e293b; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#1e293b — Slate 800 (Texto principal)<br>
+            <span style="display: inline-block; width: 14px; height: 14px; background: #0f172a; margin-right: 8px; vertical-align: middle; border-radius: 2px;"></span>#0f172a — Slate 900 (Header/Footer)
+        </p>
+    </div>
+
+    <h3>5.2 Tipografia</h3>
+    <div class="section-box">
+        <p><strong>Títulos:</strong> Lora (Serif) — Pesos 500, 600, 700</p>
+        <p><strong>Corpo:</strong> Lato (Sans-serif) — Peso 400, 700</p>
+        <p><strong>Google Fonts:</strong></p>
+        <div class="code-block" style="margin-top: 10px;">https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap</div>
+    </div>
+
+    <h3>5.3 Color Blocking</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Seção</th>
+                <th>Cor</th>
+                <th>Classe Tailwind</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Header / Hero / CTA</td>
+                <td><code>#0A192F</code></td>
+                <td>bg-[#0A192F]</td>
+            </tr>
+            <tr>
+                <td>Footer</td>
+                <td><code>#0f172a</code></td>
+                <td>bg-slate-900</td>
+            </tr>
+            <tr>
+                <td>Seções de Conteúdo</td>
+                <td><code>#ffffff</code></td>
+                <td>bg-white</td>
+            </tr>
+            <tr>
+                <td>Seções Neutras</td>
+                <td><code>#e2e8f0</code></td>
+                <td>bg-slate-200</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- RODAPÉ DO DOCUMENTO -->
+    <div class="footer-doc">
+        <p><strong>Identidade Visual do Site</strong></p>
+        <p>Documento gerado em Março de 2026</p>
+    </div>
+
+</body>
+</html>
