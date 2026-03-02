@@ -469,14 +469,14 @@
             <!-- Grid de 3 Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-                <!-- Card 1: Manutenção e Calibração -->
+                <!-- Card 1: Calibração -->
                 <a href="servicos.html#calibracao" class="group h-full bg-slate-100 border border-slate-200 border-t-4 border-t-blue-900 p-8 transition-all hover:shadow-lg">
                     <div class="mb-6">
                         <svg class="w-10 h-10 text-slate-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5"/>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-blue-900 mb-4 group-hover:text-blue-700 transition-colors">Manutenção e Calibração</h3>
+                    <h3 class="font-serif text-xl lg:text-2xl font-semibold text-blue-900 mb-4 group-hover:text-blue-700 transition-colors">Calibração</h3>
                     <p class="font-sans text-slate-600 text-sm leading-relaxed mb-6">Calibração certificada com rastreabilidade RBC/INMETRO e teste de segurança elétrica conforme IEC 60601.</p>
                     <ul class="font-sans text-slate-700 text-sm space-y-2">
                         <li class="flex items-center gap-2">
@@ -502,7 +502,7 @@
                 <a href="servicos.html#assistencia" class="group h-full bg-slate-100 border border-slate-200 border-t-4 border-t-blue-900 p-8 transition-all hover:shadow-lg">
                     <div class="mb-6">
                         <svg class="w-10 h-10 text-slate-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/>
                         </svg>
                     </div>
                     <h3 class="font-serif text-xl lg:text-2xl font-semibold text-blue-900 mb-4 group-hover:text-blue-700 transition-colors">Assistência Técnica</h3>
@@ -727,26 +727,43 @@
     </section>
 
     <!-- Missão, Visão e Valores -->
-    <section class="py-20 lg:py-24 bg-slate-200">
-        <div class="container mx-auto px-4 lg:px-8">
+    <section class="py-20 lg:py-24 relative" style="background-image: url('imagens/background_missao22.png'); background-size: cover; background-position: center;">
+        <!-- Overlay com transparência -->
+        <div class="absolute inset-0 bg-slate-200/70"></div>
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <div class="text-center mb-12">
                 <h2 class="font-heading text-2xl md:text-3xl font-semibold text-[#0A192F] tracking-tight">Missão, Visão e Valores</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white text-center p-8 rounded-xl shadow-md">
-                    <h3 class="font-serif text-lg font-semibold text-[#0A192F] mb-4">Missão</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Garantir a performance e a segurança dos equipamentos médico-hospitalares, por meio de soluções técnicas especializadas, entregando confiabilidade e suporte contínuo para que profissionais de saúde possam cuidar com excelência.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Card Missão -->
+                <div class="rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="bg-[#002D62] py-5 px-6">
+                        <h3 class="font-serif text-xl font-bold text-white text-center tracking-wide">MISSÃO</h3>
+                    </div>
+                    <div class="bg-[#e2e8f0] flex-1 p-6 text-center rounded-b-2xl">
+                        <p class="text-[#002D62] text-sm leading-relaxed">Garantir a performance e a segurança dos equipamentos médico-hospitalares, por meio de soluções técnicas especializadas, entregando confiabilidade e suporte contínuo para que profissionais de saúde possam cuidar com excelência.</p>
+                    </div>
                 </div>
 
-                <div class="bg-white text-center p-8 rounded-xl shadow-md">
-                    <h3 class="font-serif text-lg font-semibold text-[#0A192F] mb-4">Visão</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Ser referência nacional em serviços de manutenção e suporte técnico para tecnologia médica, reconhecida por inovação, agilidade e parcerias sustentáveis que antecipem as necessidades do setor de saúde.</p>
+                <!-- Card Visão -->
+                <div class="rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="bg-[#002D62] py-5 px-6">
+                        <h3 class="font-serif text-xl font-bold text-white text-center tracking-wide">VISÃO</h3>
+                    </div>
+                    <div class="bg-[#e2e8f0] flex-1 p-6 text-center rounded-b-2xl">
+                        <p class="text-[#002D62] text-sm leading-relaxed">Ser referência nacional em serviços de manutenção e suporte técnico para tecnologia médica, reconhecida por inovação, agilidade e parcerias sustentáveis que antecipem as necessidades do setor de saúde.</p>
+                    </div>
                 </div>
 
-                <div class="bg-white text-center p-8 rounded-xl shadow-md">
-                    <h3 class="font-serif text-lg font-semibold text-[#0A192F] mb-4">Valores</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Atuamos com ética, responsabilidade e clareza em todas as relações com soluções moldadas para as necessidades de profissionais e instituições de saúde.</p>
+                <!-- Card Valores -->
+                <div class="rounded-2xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="bg-[#002D62] py-5 px-6">
+                        <h3 class="font-serif text-xl font-bold text-white text-center tracking-wide">VALORES</h3>
+                    </div>
+                    <div class="bg-[#e2e8f0] flex-1 p-6 text-center rounded-b-2xl">
+                        <p class="text-[#002D62] text-sm leading-relaxed">Atuamos com ética, responsabilidade e clareza em todas as relações com soluções moldadas para as necessidades de profissionais e instituições de saúde.</p>
+                    </div>
                 </div>
             </div>
         </div>
