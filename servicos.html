@@ -388,6 +388,9 @@
                                     <div class="w-full flex-shrink-0 flex items-center justify-center">
                                         <img src="imagens/Analisador para Monitor Multiparâmetro/Analisador para Monitor Multiparâmetro.jpeg" alt="Analisador para Monitor Multiparâmetro" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-contain rounded-md">
                                     </div>
+                                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                                        <img src="imagens/Calibrador Aparelho de pressão/Calibrador Aparelho de pressão.jpeg" alt="Calibrador Aparelho de Pressão" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-contain rounded-md">
+                                    </div>
                                 </div>
                             </div>
                             <!-- Indicadores -->
@@ -396,6 +399,7 @@
                                 <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="1" aria-label="Slide 2"></button>
                                 <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="2" aria-label="Slide 3"></button>
                                 <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="3" aria-label="Slide 4"></button>
+                                <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="4" aria-label="Slide 5"></button>
                             </div>
                         </div>
                     </div>
@@ -952,7 +956,7 @@
         let analisadorAutoplay = true;
         let analisadorInterval = null;
         let equipamentosExpanded = false;
-        const totalAnalisadorSlides = 4;
+        const totalAnalisadorSlides = 5;
         const analisadorSpeed = 5000; // 5 segundos
 
         // Dados dos analisadores
@@ -996,6 +1000,16 @@
                     { src: "imagens/Analisador para Monitor Multiparâmetro/WhatsApp Image 2026-03-02 at 16.09.27.jpeg", alt: "Monitor Multiparâmetro" },
                     { src: "imagens/Analisador para Monitor Multiparâmetro/WhatsApp Image 2026-03-02 at 16.09.27 (1).jpeg", alt: "Monitor de Sinais Vitais" },
                     { src: "imagens/Analisador para Monitor Multiparâmetro/WhatsApp Image 2026-03-02 at 16.09.27 (2).jpeg", alt: "Monitor Hospitalar" }
+                ]
+            },
+            {
+                titulo: "Calibrador Aparelho de Pressão",
+                descricao: "Simulador de Pressão Arterial Não Invasiva (PNI) com sistema de injeção automático ou acionado por controle via mouse. Realiza teste de escapamento de ar e possui sensor de temperatura e umidade para correção da deriva térmica.",
+                equipamentos: [
+                    { src: "imagens/Calibrador Aparelho de pressão/WhatsApp Image 2026-03-02 at 15.26.15 (1).jpeg", alt: "Aparelho de Pressão" },
+                    { src: "imagens/Calibrador Aparelho de pressão/WhatsApp Image 2026-03-02 at 15.26.15 (2).jpeg", alt: "Esfigmomanômetro" },
+                    { src: "imagens/Calibrador Aparelho de pressão/WhatsApp Image 2026-03-02 at 15.26.15 (3).jpeg", alt: "Monitor de Pressão" },
+                    { src: "imagens/Calibrador Aparelho de pressão/WhatsApp Image 2026-03-02 at 15.26.16.jpeg", alt: "Aparelho de Pressão Digital" }
                 ]
             }
         ];

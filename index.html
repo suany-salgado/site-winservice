@@ -938,8 +938,8 @@
         }
 
         function resetAutoPlay() {
-            clearInterval(autoPlayInterval);
-            autoPlayInterval = setInterval(nextSlide, 5000);
+            stopAutoPlay();
+            startAutoPlay();
         }
 
         if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
@@ -949,7 +949,19 @@
         });
 
         // Auto-play
-        autoPlayInterval = setInterval(nextSlide, 5000);
+        let carouselPaused = false;
+
+        function startAutoPlay() {
+            if (!carouselPaused) {
+                autoPlayInterval = setInterval(nextSlide, 5000);
+            }
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        startAutoPlay();
         updateCarousel(); // Inicializa os dots corretamente
 
         // Reset carousel on window resize
@@ -964,27 +976,33 @@
         let touchEndX = 0;
 
         if (carousel) {
+            // Pause no hover (desktop)
+            carousel.addEventListener('mouseenter', () => {
+                carouselPaused = true;
+                stopAutoPlay();
+            });
+            carousel.addEventListener('mouseleave', () => {
+                carouselPaused = false;
+                startAutoPlay();
+            });
+
+            // Touch/swipe (mobile)
             carousel.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
+                carouselPaused = true;
+                stopAutoPlay();
             }, { passive: true });
 
             carousel.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, { passive: true });
-        }
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) nextSlide();
+                    else prevSlide();
                 }
-                resetAutoPlay();
-            }
+                carouselPaused = false;
+                startAutoPlay();
+            }, { passive: true });
         }
     </script>
 </body>
