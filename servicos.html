@@ -370,33 +370,61 @@
                     <p class="text-slate-600 text-sm max-w-2xl mx-auto">Calibração certificada com rastreabilidade para garantir a precisão e segurança dos seus equipamentos.</p>
                 </div>
 
-                <!-- Card Analisador para Bomba de Infusão e Seringa -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-5xl mx-auto mb-10 bg-white rounded-lg p-6 border border-slate-200">
-                    <!-- Imagem Principal do Analisador à esquerda -->
+                <!-- Card Carrossel de Analisadores -->
+                <div id="analisador-card" class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-5xl mx-auto mb-10 bg-white rounded-lg p-6 border border-slate-200">
+                    <!-- Carrossel de Imagens Principais à esquerda -->
                     <div class="order-1 lg:order-1">
-                        <div class="flex items-center justify-center p-4 bg-slate-50 rounded-lg">
-                            <img src="imagens/Analisador para bomba de infusão e seringa/Analisador para bomba de infusão e seringa.jpeg" alt="Analisador para Bomba de Infusão e Seringa" loading="lazy" decoding="async" class="w-full h-auto object-contain rounded-lg">
+                        <div class="bg-white shadow-lg rounded-2xl p-4 w-full">
+                            <div class="relative overflow-hidden" id="analisador-carousel-container">
+                                <!-- Slides das imagens principais -->
+                                <div id="analisador-carousel" class="flex transition-transform duration-500 ease-in-out">
+                                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                                        <img src="imagens/Analisador para bomba de infusão e seringa/Analisador para bomba de infusão e seringa.jpeg" alt="Analisador para Bomba de Infusão e Seringa" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-contain rounded-md">
+                                    </div>
+                                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                                        <img src="imagens/Bombas de infusão Parenteral/Analisador para bomba de infusão e seringa.jpeg" alt="Bombas de Infusão Parenteral" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-contain rounded-md">
+                                    </div>
+                                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                                        <img src="imagens/Analisador para Desfibrilador e Cardioversor/Analisador para Desfibrilador e Cardioversor.jpeg" alt="Analisador para Desfibrilador e Cardioversor" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-contain rounded-md">
+                                    </div>
+                                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                                        <img src="imagens/Analisador para Monitor Multiparâmetro/Analisador para Monitor Multiparâmetro.jpeg" alt="Analisador para Monitor Multiparâmetro" loading="lazy" decoding="async" class="w-full h-64 sm:h-72 object-contain rounded-md">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Indicadores -->
+                            <div class="flex justify-center gap-2 mt-3">
+                                <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="0" aria-label="Slide 1"></button>
+                                <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="1" aria-label="Slide 2"></button>
+                                <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="2" aria-label="Slide 3"></button>
+                                <button class="analisador-dot w-2.5 h-2.5 rounded-full bg-slate-800/30 transition-all" data-index="3" aria-label="Slide 4"></button>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Conteúdo à direita -->
+                    <!-- Conteúdo Dinâmico à direita -->
                     <div class="order-2 lg:order-2">
-                        <h4 class="text-xl font-bold text-blue-900 mb-3">Analisador para Bomba de Infusão e Seringa</h4>
-                        <p class="text-slate-600 mb-4 leading-relaxed text-sm">
+                        <h4 id="analisador-titulo" class="text-xl font-bold text-blue-900 mb-3 transition-opacity duration-300 min-h-[56px]">Analisador para Bomba de Infusão e Seringa</h4>
+                        <p id="analisador-descricao" class="text-slate-600 mb-4 leading-relaxed text-sm transition-opacity duration-300 min-h-[60px]">
                             Equipamento de alta precisão utilizado para testar e calibrar o funcionamento de bombas de infusão e seringa, garantindo a máxima segurança e dosagem correta em procedimentos médicos.
                         </p>
 
-                        <!-- Caixa com imagens dos equipamentos que o analisador lê -->
-                        <div class="bg-slate-100/80 p-5 rounded-lg mb-5 border border-slate-200">
+                        <!-- Caixa com imagens dos equipamentos calibrados -->
+                        <div class="bg-slate-100/80 p-5 rounded-lg mb-5 border border-slate-200 min-h-[200px]">
                             <h5 class="font-semibold text-blue-900 text-sm mb-4 text-center">Equipamentos Calibrados</h5>
-                            <div class="flex gap-4 items-center justify-center flex-wrap">
-                                <div class="bg-white p-2 rounded-md shadow-sm">
-                                    <img src="imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.06.10.jpeg" alt="Bomba de Infusão" loading="lazy" decoding="async" class="w-28 h-24 object-contain rounded-md">
-                                </div>
-                                <div class="bg-white p-2 rounded-md shadow-sm">
-                                    <img src="imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.06.11.jpeg" alt="Bomba de Seringa" loading="lazy" decoding="async" class="w-28 h-24 object-contain rounded-md">
+                            <div class="relative h-[100px]">
+                                <div id="analisador-equipamentos" class="grid grid-cols-3 gap-3 justify-items-center transition-all duration-300 overflow-hidden absolute inset-x-0 top-0" style="max-height: 100px;">
+                                    <!-- Equipamentos serão inseridos via JavaScript -->
                                 </div>
                             </div>
+                            <!-- Botão Ver Mais (aparece quando há mais de 3 equipamentos) -->
+                            <button id="equipamentos-ver-mais" onclick="toggleEquipamentos()" class="hidden w-full mt-3 py-2 text-xs text-blue-900 hover:text-blue-700 font-medium transition-colors items-center justify-center gap-1">
+                                <span id="equipamentos-btn-text">Ver mais</span>
+                                <svg id="equipamentos-btn-icon" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <p class="text-xs text-slate-500 text-center mt-3">Clique nas imagens para ampliar</p>
                         </div>
 
                         <a href="https://wa.me/5521981353322?text=Olá! Gostaria de informações sobre calibração de equipamentos médicos." target="_blank" class="inline-flex items-center gap-2 bg-blue-900 hover:bg-blue-800 text-white px-5 py-2.5 rounded-sm font-semibold transition-all text-sm">
@@ -857,6 +885,184 @@
         window.addEventListener('scroll', updateActiveTabs);
         updateActiveTabs();
 
+        // Carrossel de Analisadores com conteúdo dinâmico
+        const analisadorCarousel = document.getElementById('analisador-carousel');
+        const analisadorDots = document.querySelectorAll('.analisador-dot');
+        const analisadorContainer = document.getElementById('analisador-carousel-container');
+        const analisadorCard = document.getElementById('analisador-card');
+        let analisadorSlide = 0;
+        let analisadorAutoplay = true;
+        let analisadorInterval = null;
+        let equipamentosExpanded = false;
+        const totalAnalisadorSlides = 4;
+        const analisadorSpeed = 5000; // 5 segundos
+
+        // Dados dos analisadores
+        const analisadoresData = [
+            {
+                titulo: "Analisador para Bomba de Infusão e Seringa",
+                descricao: "Equipamento de alta precisão utilizado para testar e calibrar o funcionamento de bombas de infusão e seringa, garantindo a máxima segurança e dosagem correta em procedimentos médicos.",
+                equipamentos: [
+                    { src: "imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.06.10.jpeg", alt: "Bomba de Infusão" },
+                    { src: "imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.06.11.jpeg", alt: "Bomba de Seringa" },
+                    { src: "imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.21.26 (1).jpeg", alt: "Bomba de Infusão Volumétrica" },
+                    { src: "imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.12.01.jpeg", alt: "Bomba de Infusão Enteral" },
+                    { src: "imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.12.01 (1).jpeg", alt: "Bomba de Seringa Multicanal" },
+                    { src: "imagens/Analisador para bomba de infusão e seringa/WhatsApp Image 2026-03-02 at 16.12.01 (2).jpeg", alt: "Bomba de Infusão Peristáltica" }
+                ]
+            },
+            {
+                titulo: "Bombas de Infusão Parenteral",
+                descricao: "Calibração especializada de bombas de infusão parenteral, garantindo a precisão na administração de nutrição parenteral e medicamentos intravenosos com total segurança.",
+                equipamentos: [
+                    { src: "imagens/Bombas de infusão Parenteral/WhatsApp Image 2026-03-02 at 16.12.55.jpeg?v=2", alt: "Bomba Parenteral" },
+                    { src: "imagens/Bombas de infusão Parenteral/WhatsApp Image 2026-03-02 at 16.12.55 (1).jpeg?v=2", alt: "Bomba Parenteral Dupla" },
+                    { src: "imagens/Bombas de infusão Parenteral/WhatsApp Image 2026-03-02 at 16.18.08.jpeg?v=2", alt: "Bomba Parenteral Portátil" }
+                ]
+            },
+            {
+                titulo: "Analisador para Desfibrilador e Cardioversor",
+                descricao: "Equipamento especializado para análise e calibração de desfibriladores e cardioversores, assegurando o funcionamento correto dos parâmetros de energia e segurança em situações de emergência cardíaca.",
+                equipamentos: [
+                    { src: "imagens/Analisador para Desfibrilador e Cardioversor/WhatsApp Image 2026-03-02 at 16.07.07.jpeg", alt: "Desfibrilador" },
+                    { src: "imagens/Analisador para Desfibrilador e Cardioversor/WhatsApp Image 2026-03-02 at 16.07.07 (1).jpeg", alt: "Cardioversor" },
+                    { src: "imagens/Analisador para Desfibrilador e Cardioversor/WhatsApp Image 2026-03-02 at 16.07.07 (2).jpeg", alt: "DEA Portátil" },
+                    { src: "imagens/Analisador para Desfibrilador e Cardioversor/WhatsApp Image 2026-03-02 at 16.07.08.jpeg", alt: "Monitor Cardíaco" },
+                    { src: "imagens/Analisador para Desfibrilador e Cardioversor/deas12.png", alt: "DEA" }
+                ]
+            },
+            {
+                titulo: "Analisador para Monitor Multiparâmetro",
+                descricao: "Equipamento de precisão para análise e calibração de monitores multiparâmetro, verificando parâmetros vitais como ECG, SpO2, pressão arterial e temperatura, essenciais para o monitoramento seguro de pacientes.",
+                equipamentos: [
+                    { src: "imagens/Analisador para Monitor Multiparâmetro/WhatsApp Image 2026-03-02 at 16.09.27.jpeg", alt: "Monitor Multiparâmetro" },
+                    { src: "imagens/Analisador para Monitor Multiparâmetro/WhatsApp Image 2026-03-02 at 16.09.27 (1).jpeg", alt: "Monitor de Sinais Vitais" },
+                    { src: "imagens/Analisador para Monitor Multiparâmetro/WhatsApp Image 2026-03-02 at 16.09.27 (2).jpeg", alt: "Monitor Hospitalar" }
+                ]
+            }
+        ];
+
+        function updateAnalisadorCarousel() {
+            analisadorCarousel.style.transform = `translateX(-${analisadorSlide * 100}%)`;
+
+            // Atualizar dots
+            analisadorDots.forEach((dot, index) => {
+                dot.classList.toggle('bg-slate-800', index === analisadorSlide);
+                dot.classList.toggle('bg-slate-800/30', index !== analisadorSlide);
+                dot.classList.toggle('w-4', index === analisadorSlide);
+            });
+
+            // Atualizar conteúdo com fade
+            const data = analisadoresData[analisadorSlide];
+            const titulo = document.getElementById('analisador-titulo');
+            const descricao = document.getElementById('analisador-descricao');
+            const equipamentos = document.getElementById('analisador-equipamentos');
+            const verMaisBtn = document.getElementById('equipamentos-ver-mais');
+            const btnText = document.getElementById('equipamentos-btn-text');
+            const btnIcon = document.getElementById('equipamentos-btn-icon');
+
+            titulo.style.opacity = '0';
+            descricao.style.opacity = '0';
+            equipamentos.style.opacity = '0';
+
+            setTimeout(() => {
+                titulo.textContent = data.titulo;
+                descricao.textContent = data.descricao;
+
+                // Gerar HTML dos equipamentos
+                equipamentos.innerHTML = data.equipamentos.map((eq, index) => `
+                    <div class="bg-white p-2 rounded-md shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="openLightbox('${eq.src}', '${eq.alt}', ${index})">
+                        <img src="${eq.src}" alt="${eq.alt}" loading="lazy" decoding="async" class="w-20 h-16 object-contain rounded-md hover:scale-105 transition-transform">
+                    </div>
+                `).join('');
+
+                // Resetar estado do "Ver mais"
+                equipamentos.style.maxHeight = '100px';
+                equipamentos.parentElement.style.height = '100px';
+                equipamentosExpanded = false;
+                btnText.textContent = 'Ver mais';
+                btnIcon.style.transform = 'rotate(0deg)';
+
+                // Mostrar botão "Ver mais" apenas se houver mais de 3 equipamentos
+                if (data.equipamentos.length > 3) {
+                    verMaisBtn.classList.remove('hidden');
+                    verMaisBtn.classList.add('flex');
+                } else {
+                    verMaisBtn.classList.add('hidden');
+                    verMaisBtn.classList.remove('flex');
+                }
+
+                titulo.style.opacity = '1';
+                descricao.style.opacity = '1';
+                equipamentos.style.opacity = '1';
+            }, 200);
+        }
+
+        // Função para expandir/colapsar equipamentos
+        function toggleEquipamentos() {
+            const equipamentos = document.getElementById('analisador-equipamentos');
+            const equipamentosContainer = equipamentos.parentElement;
+            const btnText = document.getElementById('equipamentos-btn-text');
+            const btnIcon = document.getElementById('equipamentos-btn-icon');
+
+            equipamentosExpanded = !equipamentosExpanded;
+
+            if (equipamentosExpanded) {
+                equipamentos.style.maxHeight = '200px';
+                equipamentosContainer.style.height = '200px';
+                btnText.textContent = 'Ver menos';
+                btnIcon.style.transform = 'rotate(180deg)';
+            } else {
+                equipamentos.style.maxHeight = '100px';
+                equipamentosContainer.style.height = '100px';
+                btnText.textContent = 'Ver mais';
+                btnIcon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function nextAnalisadorSlide() {
+            analisadorSlide = (analisadorSlide + 1) % totalAnalisadorSlides;
+            updateAnalisadorCarousel();
+        }
+
+        function prevAnalisadorSlide() {
+            analisadorSlide = (analisadorSlide - 1 + totalAnalisadorSlides) % totalAnalisadorSlides;
+            updateAnalisadorCarousel();
+        }
+
+        function startAnalisadorAutoplay() {
+            if (analisadorInterval) clearInterval(analisadorInterval);
+            analisadorInterval = setInterval(nextAnalisadorSlide, analisadorSpeed);
+        }
+
+        function stopAnalisadorAutoplay() {
+            if (analisadorInterval) {
+                clearInterval(analisadorInterval);
+                analisadorInterval = null;
+            }
+        }
+
+        // Pausar ao passar o mouse sobre o card
+        analisadorCard.addEventListener('mouseenter', () => {
+            if (analisadorAutoplay) stopAnalisadorAutoplay();
+        });
+
+        analisadorCard.addEventListener('mouseleave', () => {
+            if (analisadorAutoplay) startAnalisadorAutoplay();
+        });
+
+        // Click nos dots
+        analisadorDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                analisadorSlide = parseInt(dot.dataset.index);
+                updateAnalisadorCarousel();
+            });
+        });
+
+        // Inicializar
+        updateAnalisadorCarousel();
+        startAnalisadorAutoplay();
+
         // Carrossel de Treinamentos
         const treinamentoCarousel = document.getElementById('treinamento-carousel');
         const treinamentoDots = document.querySelectorAll('.treinamento-dot');
@@ -886,7 +1092,100 @@
 
         updateTreinamentoCarousel();
         setInterval(nextTreinamentoSlide, 4000);
+
+        // Lightbox para imagens com navegação
+        let lightboxImages = [];
+        let lightboxCurrentIndex = 0;
+
+        function openLightbox(src, alt, index) {
+            // Pegar as imagens do analisador atual
+            const data = analisadoresData[analisadorSlide];
+            lightboxImages = data.equipamentos;
+            lightboxCurrentIndex = index !== undefined ? index : 0;
+
+            updateLightboxImage();
+
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateLightboxImage() {
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            // Fade out
+            lightboxImg.style.opacity = '0';
+
+            setTimeout(() => {
+                const current = lightboxImages[lightboxCurrentIndex];
+                lightboxImg.src = current.src;
+                lightboxImg.alt = current.alt;
+
+                // Fade in
+                lightboxImg.style.opacity = '1';
+            }, 150);
+        }
+
+        function nextLightboxImage() {
+            lightboxCurrentIndex = (lightboxCurrentIndex + 1) % lightboxImages.length;
+            updateLightboxImage();
+        }
+
+        function prevLightboxImage() {
+            lightboxCurrentIndex = (lightboxCurrentIndex - 1 + lightboxImages.length) % lightboxImages.length;
+            updateLightboxImage();
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Fechar lightbox ao pressionar ESC, navegar com setas
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('hidden')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextLightboxImage();
+            if (e.key === 'ArrowLeft') prevLightboxImage();
+        });
     </script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/90 items-center justify-center p-4" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white hover:text-slate-300 transition-colors z-10" aria-label="Fechar">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        <div class="relative flex items-center gap-4" onclick="event.stopPropagation()">
+            <!-- Seta Anterior -->
+            <button id="lightbox-prev" onclick="prevLightboxImage()" class="bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all flex-shrink-0" aria-label="Anterior">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
+
+            <!-- Container da Imagem -->
+            <div class="flex flex-col items-center">
+                <div class="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] flex items-center justify-center bg-white/5 rounded-lg p-4">
+                    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-opacity duration-200">
+                </div>
+            </div>
+
+            <!-- Seta Próximo -->
+            <button id="lightbox-next" onclick="nextLightboxImage()" class="bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all flex-shrink-0" aria-label="Próximo">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </div>
 
 </body>
 </html>
