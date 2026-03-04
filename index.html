@@ -161,8 +161,8 @@
     <!-- Google Fonts - Optimized with display=swap and reduced weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&family=Cinzel:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- Tailwind CSS - Production optimized -->
     <script src="https://cdn.tailwindcss.com?plugins="></script>
@@ -173,6 +173,7 @@
                 fontFamily: {
                     'sans': ['Lato', 'system-ui', 'sans-serif'],
                     'serif': ['Lora', 'Georgia', 'serif'],
+                    'display': ['Cinzel', 'Georgia', 'serif'],
                 },
                 extend: {
                     colors: {
@@ -305,6 +306,7 @@
 
                     <!-- Mobile Menu - Visible inline -->
                     <div class="flex items-center gap-1 sm:gap-2 lg:hidden">
+                        <a href="index.html" class="text-white text-[11px] sm:text-xs font-semibold px-1.5 sm:px-2 py-1 rounded hover:bg-slate-800/50 transition-colors">Início</a>
                         <a href="servicos.html" class="text-white/90 text-[11px] sm:text-xs font-medium px-1.5 sm:px-2 py-1 rounded hover:bg-slate-800/50 transition-colors">Serviços</a>
                         <a href="produtos.html" class="text-white/90 text-[11px] sm:text-xs font-medium px-1.5 sm:px-2 py-1 rounded hover:bg-slate-800/50 transition-colors">Produtos</a>
                         <a href="contato.html" class="bg-[#E60000] hover:bg-[#cc0000] text-white text-[10px] sm:text-xs font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded transition-colors whitespace-nowrap">Fale Conosco</a>
@@ -321,7 +323,7 @@
                         <a href="#sobre" class="text-white/70 font-medium hover:text-white transition-colors">Sobre Nós</a>
                         <a href="servicos.html" class="text-white/70 font-medium hover:text-white transition-colors">Serviços</a>
                         <a href="produtos.html" class="text-white/70 font-medium hover:text-white transition-colors">Produtos</a>
-                        <a href="contato.html" class="text-white/70 font-medium hover:text-white transition-colors">Fale Conosco</a>
+                        <a href="contato.html" class="text-white font-medium bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded transition-all">Fale Conosco</a>
                         <a href="https://winservice.arkmeds.com/usuarios/conectar?next=/usuarios/desconectar" target="_blank" class="text-white/70 font-medium hover:text-white transition-colors">Área do Cliente</a>
                     </div>
                 </div>
@@ -384,7 +386,7 @@
                         <a href="contato.html" class="bg-[#E60000] hover:bg-[#cc0000] text-white px-8 py-4 rounded-sm font-semibold transition-all shadow-lg shadow-red-900/30">
                             Solicitar Orçamento
                         </a>
-                        <a href="servicos.html" class="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-sm font-semibold transition-all border border-white">
+                        <a href="servicos.html" class="bg-white hover:bg-slate-100 text-[#0A192F] px-8 py-4 rounded-sm font-semibold transition-all">
                             Nossos Serviços
                         </a>
                     </div>
@@ -581,10 +583,10 @@
                         <div id="carousel" class="relative overflow-hidden">
                             <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
                                 <div class="carousel-slide w-full flex-shrink-0 flex flex-col items-center justify-center">
-                                    <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.32.jpeg" alt="Treinamento DEA - Win Service"
+                                    <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (3).jpeg" alt="Assistência Técnica Autorizada - Win Service"
                                          width="600" height="400" loading="lazy" decoding="async"
                                          class="w-full h-64 sm:h-72 object-cover object-center rounded-md">
-                                    <p class="text-slate-500 text-xs uppercase tracking-wider text-center mt-2">Treinamento DEA</p>
+                                    <p class="text-slate-500 text-xs uppercase tracking-wider text-center mt-2">Assistência Técnica Autorizada</p>
                                 </div>
                                 <div class="carousel-slide w-full flex-shrink-0 flex flex-col items-center justify-center">
                                     <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (2).jpeg" alt="Equipamentos de Alta Tecnologia - Win Service"
@@ -593,16 +595,16 @@
                                     <p class="text-slate-500 text-xs uppercase tracking-wider text-center mt-2">Equipamentos de Alta Tecnologia</p>
                                 </div>
                                 <div class="carousel-slide w-full flex-shrink-0 flex flex-col items-center justify-center">
-                                    <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.48 (3).jpeg" alt="Assistência Técnica Autorizada - Win Service"
-                                         width="600" height="400" loading="lazy" decoding="async"
-                                         class="w-full h-64 sm:h-72 object-cover object-center rounded-md">
-                                    <p class="text-slate-500 text-xs uppercase tracking-wider text-center mt-2">Assistência Técnica Autorizada</p>
-                                </div>
-                                <div class="carousel-slide w-full flex-shrink-0 flex flex-col items-center justify-center">
                                     <img src="imagens/WhatsApp Image 2026-03-02 at 16.48.47.jpeg" alt="Equipe Especializada - Win Service"
                                          width="600" height="400" loading="lazy" decoding="async"
                                          class="w-full h-64 sm:h-72 object-cover object-top rounded-md">
                                     <p class="text-slate-500 text-xs uppercase tracking-wider text-center mt-2">Equipe Especializada</p>
+                                </div>
+                                <div class="carousel-slide w-full flex-shrink-0 flex flex-col items-center justify-center">
+                                    <img src="imagens/WhatsApp Image 2026-02-11 at 10.43.32.jpeg" alt="Treinamento DEA - Win Service"
+                                         width="600" height="400" loading="lazy" decoding="async"
+                                         class="w-full h-64 sm:h-72 object-cover object-center rounded-md">
+                                    <p class="text-slate-500 text-xs uppercase tracking-wider text-center mt-2">Treinamento DEA</p>
                                 </div>
                             </div>
                         </div>
@@ -618,7 +620,7 @@
 
                 <!-- Conteúdo Textual -->
                 <div class="flex-1">
-                    <span class="font-body text-xs uppercase tracking-widest text-gray-400 mb-4 ">Sobre Nós</span>
+                    <span class="font-body text-xs uppercase tracking-widest text-blue-900 mb-4">Sobre Nós</span>
                     <h2 class="font-heading text-3xl md:text-4xl font-semibold text-blue-900 mb-6 tracking-tight">Tradição e Tecnologia</h2>
 
                     <p class="font-body text-gray-600 mb-8 leading-relaxed text-base lg:text-lg">
@@ -740,7 +742,7 @@
                 <!-- Card Missão -->
                 <div class="rounded-2xl overflow-hidden shadow-lg flex flex-col">
                     <div class="bg-[#002D62] py-5 px-6">
-                        <h3 class="font-serif text-xl font-bold text-white text-center tracking-wide">MISSÃO</h3>
+                        <h3 class="font-display text-xl font-semibold text-white text-center tracking-widest">MISSÃO</h3>
                     </div>
                     <div class="bg-[#e2e8f0] flex-1 p-6 text-center rounded-b-2xl">
                         <p class="text-[#002D62] text-sm leading-relaxed">Garantir a performance e a segurança dos equipamentos médico-hospitalares, por meio de soluções técnicas especializadas, entregando confiabilidade e suporte contínuo para que profissionais de saúde possam cuidar com excelência.</p>
@@ -750,7 +752,7 @@
                 <!-- Card Visão -->
                 <div class="rounded-2xl overflow-hidden shadow-lg flex flex-col">
                     <div class="bg-[#002D62] py-5 px-6">
-                        <h3 class="font-serif text-xl font-bold text-white text-center tracking-wide">VISÃO</h3>
+                        <h3 class="font-display text-xl font-semibold text-white text-center tracking-widest">VISÃO</h3>
                     </div>
                     <div class="bg-[#e2e8f0] flex-1 p-6 text-center rounded-b-2xl">
                         <p class="text-[#002D62] text-sm leading-relaxed">Ser referência nacional em serviços de manutenção e suporte técnico para tecnologia médica, reconhecida por inovação, agilidade e parcerias sustentáveis que antecipem as necessidades do setor de saúde.</p>
@@ -760,7 +762,7 @@
                 <!-- Card Valores -->
                 <div class="rounded-2xl overflow-hidden shadow-lg flex flex-col">
                     <div class="bg-[#002D62] py-5 px-6">
-                        <h3 class="font-serif text-xl font-bold text-white text-center tracking-wide">VALORES</h3>
+                        <h3 class="font-display text-xl font-semibold text-white text-center tracking-widest">VALORES</h3>
                     </div>
                     <div class="bg-[#e2e8f0] flex-1 p-6 text-center rounded-b-2xl">
                         <p class="text-[#002D62] text-sm leading-relaxed">Atuamos com ética, responsabilidade e clareza em todas as relações com soluções moldadas para as necessidades de profissionais e instituições de saúde.</p>
