@@ -911,6 +911,34 @@
             switchTab(openTab);
             localStorage.removeItem('openTab');
         }
+
+        // Scroll para o produto específico se houver hash na URL
+        if (window.location.hash) {
+            const productId = window.location.hash.substring(1);
+            const productElement = document.getElementById(productId);
+
+            if (productElement) {
+                // Determinar qual tab contém o produto
+                const tothContent = document.getElementById('content-toth');
+                const medContent = document.getElementById('content-medlevensohn');
+
+                if (tothContent && tothContent.contains(productElement)) {
+                    switchTab('toth');
+                } else if (medContent && medContent.contains(productElement)) {
+                    switchTab('medlevensohn');
+                }
+
+                // Aguardar a tab abrir e fazer scroll
+                setTimeout(() => {
+                    productElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Destacar o produto brevemente
+                    productElement.classList.add('ring-2', 'ring-blue-500');
+                    setTimeout(() => {
+                        productElement.classList.remove('ring-2', 'ring-blue-500');
+                    }, 2000);
+                }, 100);
+            }
+        }
     </script>
 
 </body>
