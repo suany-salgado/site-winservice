@@ -4,7 +4,8 @@
       "WebFetch(domain:pagespeed.web.dev)",
       "Bash(python -m http.server 8080)",
       "Bash(start http://localhost:8080)",
-      "Bash(python -m http.server 8000)"
+      "Bash(python -m http.server 8000)",
+      "Bash(grep -n \"style=\"\".*width.*px\" /c/Users/Elaine/Documents/_Projetos/site-winservice/*.html)"
     ]
   }
 }
