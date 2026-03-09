@@ -14,7 +14,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/imagens/Bombas%20de%20infus%C3%A3o%20Parenteral/WhatsApp%20Image%202026-03-02%20at%2016.12.55.jpeg\")",
       "Bash(start chrome --incognito \"http://localhost:8080/servicos.html\")",
       "Bash(start python -m http.server 8080)",
-      "Bash(start http://localhost:8080/produtos.html)"
+      "Bash(start http://localhost:8080/produtos.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/servicos.html)"
     ]
   }
 }
